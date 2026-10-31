@@ -1,0 +1,12 @@
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\bin\Release\CFCAIM-Database.dacpac
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\bin\Release\CFCAIM_Database.dll
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\bin\Release\CFCAIM_Database.pdb
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\bin\Release\master.dacpac
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\CFCAIM-Database.sqlproj.AssemblyReference.cache
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\Model.xml
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\refactor.xml
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\postdeploy.sql
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\predeploy.sql
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\CFCAIM-D.2EF8B591.Up2Date
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\CFCAIM_Database.dll
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIM-Database\obj\Release\CFCAIM_Database.pdb

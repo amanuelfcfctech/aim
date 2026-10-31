@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [saAdmin]
+    WITH PASSWORD = N'cf@bqzna|x2jeCj+lb_hlp{JmsFT7_&#$!~<doK!s{b0|wai', SID = 0xEE2F793FBDDEEE4FBBF9CD91CA39952B, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

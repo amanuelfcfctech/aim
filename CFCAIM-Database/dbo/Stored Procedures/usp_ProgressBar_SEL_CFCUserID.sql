@@ -1,0 +1,18 @@
+﻿CREATE PROCEDURE [dbo].[usp_ProgressBar_SEL_CFCUserID]
+@CFCUserID	INT
+			
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SELECT 
+	  TOP 1 P.*
+FROM 
+	dbo.ProgressBar P WITH (NOLOCK)
+
+WHERE P.CFCUserID = @CFCUserID
+
+ORDER BY UpdateStamp DESC
+	
+END
+

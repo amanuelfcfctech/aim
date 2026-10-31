@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[usp_SampleAIMRefCFCUser_DEL_SampleAIMRefCFCUserID]
+				@SampleAIMRefCFCUserID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DELETE
+FROM 
+	dbo.SampleAIMRefCFCUser WITH(ROWLOCK)
+WHERE
+	SampleAIMRefCFCUserID = @SampleAIMRefCFCUserID
+
+END

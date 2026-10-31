@@ -1,0 +1,32 @@
+﻿using System;
+using CFCAIMCore.Entity;
+using CFCAIMCore.Manager;
+
+namespace CFCAIM.ReportDevExpress
+{
+    public partial class IngredientExportBatchReport : DevExpress.XtraReports.UI.XtraReport
+    {
+        public IngredientExportBatchReport()
+        {
+            InitializeComponent();
+        }
+
+		private void IngredientExportBatchReport_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+		{
+            //9/9/20 - change to use AIMCoreGlobal
+            //AnalysisExportBatchMaintenance exportBatch = AIMManager.GetUpdateIngredientHeader(AIMGlobal.exportbatchmaintenanceHeaderID);
+            AnalysisExportBatchMaintenance exportBatch = AIMManager.GetUpdateIngredientHeader(CFCAIMCore.Global.exportbatchmaintenanceHeaderID);
+
+            lblBatchName.Text = exportBatch.UpdateName;
+			lblPrintedDate.Text = DateTime.Today.ToShortDateString();
+			lblUser.Text = exportBatch.UserName;
+
+            //9/9/20 - change to use AIMCoreGlobal
+            //lblDataMap.Text = AIMGlobal.aimDatabase.Name;
+            lblDataMap.Text = CFCAIMCore.Global.aimDatabase.Name;
+
+            lblBatchName.Text = exportBatch.CreateDate.ToShortDateString();
+		}
+
+    }
+}

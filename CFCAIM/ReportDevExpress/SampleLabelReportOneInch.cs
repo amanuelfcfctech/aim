@@ -1,0 +1,57 @@
+﻿using System.Drawing;
+
+
+
+namespace CFCAIM.ReportDevExpress
+{
+    public partial class SampleLabelReportOneInch : DevExpress.XtraReports.UI.XtraReport
+    {
+        public SampleLabelReportOneInch()
+        {
+            InitializeComponent();
+        }
+
+        //6/30/21
+        private void SampleLabelReport_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //Line1
+            //Task1085 DB250723 if (AIMGlobal.line1Bold == true)
+            if (AIMGlobal.line1Bold == true && AIMGlobal.line1FontSize > 0)
+            {
+                //Task1085 DB250723 xrLabelCaption1.Font = new Font(xrLabelCaption1.Font.Name, xrLabelCaption1.Font.Size, FontStyle.Bold);
+                //Task1085 DB250723 xrLabelField1.Font = new Font(xrLabelField1.Font.Name, xrLabelField1.Font.Size, FontStyle.Bold);
+                xrLabelCaption1.Font = new Font(xrLabelCaption1.Font.Name, AIMGlobal.line1FontSize, FontStyle.Bold);
+                xrLabelField1.Font = new Font(xrLabelField1.Font.Name, AIMGlobal.line1FontSize, FontStyle.Bold);
+            }
+
+            //Line2
+            //Task1085 DB250723 if (AIMGlobal.line2Bold == true)
+            if (AIMGlobal.line2Bold == true && AIMGlobal.line2FontSize > 0)
+            {
+                //Task1085 DB250723 xrLabelCaption2.Font = new Font(xrLabelCaption2.Font.Name, xrLabelCaption2.Font.Size, FontStyle.Bold);
+                //Task1085 DB250723 xrLabelField2.Font = new Font(xrLabelField2.Font.Name, xrLabelField2.Font.Size, FontStyle.Bold);
+                xrLabelCaption2.Font = new Font(xrLabelCaption2.Font.Name, AIMGlobal.line2FontSize, FontStyle.Bold);
+                xrLabelField2.Font = new Font(xrLabelField2.Font.Name, AIMGlobal.line2FontSize, FontStyle.Bold);
+            }
+
+            //Line3
+            //Task1085 DB250723 if (AIMGlobal.line3Bold == true)
+            if (AIMGlobal.line3Bold == true && AIMGlobal.line3FontSize > 0)
+            {
+                //Task1085 DB250723 xrLabelCaption3.Font = new Font(xrLabelCaption3.Font.Name, xrLabelCaption3.Font.Size, FontStyle.Bold);
+                //Task1085 DB250723 xrLabelField3.Font = new Font(xrLabelField3.Font.Name, xrLabelField3.Font.Size, FontStyle.Bold);
+                xrLabelCaption3.Font = new Font(xrLabelCaption3.Font.Name, AIMGlobal.line3FontSize, FontStyle.Bold);
+                xrLabelField3.Font = new Font(xrLabelField3.Font.Name, AIMGlobal.line3FontSize, FontStyle.Bold);
+            }
+
+            ////Line4
+            //if (AIMGlobal.line4Bold == true) { xrLabelCaption4.Font = new Font(xrLabelCaption4.Font.FontFamily, xrLabelCaption4.Font.Size, FontStyle.Bold); }
+            //if (AIMGlobal.line4Bold == true) { xrLabelField4.Font = new Font(xrLabelField4.Font.FontFamily, xrLabelField4.Font.Size, FontStyle.Bold); }
+
+            ////Line5
+            //if (AIMGlobal.line5Bold == true) { xrLabelCaption5.Font = new Font(xrLabelCaption5.Font.FontFamily, xrLabelCaption5.Font.Size, FontStyle.Bold); }
+            //if (AIMGlobal.line5Bold == true) { xrLabelField5.Font = new Font(xrLabelField5.Font.FontFamily, xrLabelField5.Font.Size, FontStyle.Bold); }
+        }
+
+    }
+}

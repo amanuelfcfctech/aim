@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c5d710e8-dc79-402b-94a2-8e3da2c75d18" ChangeDateTime="05/07/2015 17:55:40">
+    <Property Name="ElementName" Value="[dbo].[AIMConfig].[IsActive]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AIMConfig]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsActived" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ff0aabf8-830e-4a37-9e8c-85403d1d09fe" ChangeDateTime="05/07/2015 17:56:11">
+    <Property Name="ElementName" Value="[dbo].[AIMConfig].[IsActived]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AIMConfig]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsActive" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3ef409f0-308c-45cd-aa64-ad48b27ade1b" ChangeDateTime="05/21/2015 18:53:33">
+    <Property Name="ElementName" Value="[dbo].[UserOptions].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserOptions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserOptionsID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d92f234e-895b-4fc3-bafa-4efb4a39588a" ChangeDateTime="05/21/2015 18:57:50">
+    <Property Name="ElementName" Value="[dbo].[UserOptionDescriptions].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserOptionDescriptions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserOptionDescriptionsID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="29555512-a8ac-4613-a0aa-68328994fd38" ChangeDateTime="05/21/2015 18:58:55">
+    <Property Name="ElementName" Value="[dbo].[UserOptionDescriptions].[UserOptionDescriptionsID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserOptionDescriptions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserOptionsID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="43a45170-9a43-4e35-8771-7e6ba23ea5af" ChangeDateTime="05/21/2015 18:59:25">
+    <Property Name="ElementName" Value="[dbo].[UserOptionDescriptions].[UserOptionsID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserOptionDescriptions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserOptionID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e6be2fff-be66-4f3c-bda9-7003bc51e893" ChangeDateTime="05/21/2015 19:01:05">
+    <Property Name="ElementName" Value="[dbo].[UserOptionCrossReference].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserOptionCrossReference]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CFCUserID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="55f17879-27c9-47b2-ab71-c0eaa80fcb03" ChangeDateTime="06/08/2015 16:54:30">
+    <Property Name="ElementName" Value="[dbo].[Sample].[AIMID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sample]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AIMCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="069258fc-81ac-4f74-8c89-9cced632e256" ChangeDateTime="06/08/2015 18:46:29">
+    <Property Name="ElementName" Value="[dbo].[QueryTemplate].[IncludeExcludeXRefID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[QueryTemplate]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IncludeExcludeCrossRefID" />
+  </Operation>
+</Operations>

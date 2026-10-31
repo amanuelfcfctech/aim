@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[usp_PNECredit_DEL]
+				@PNECreditID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DELETE
+FROM 
+	dbo.PNECredit  WITH(ROWLOCK)
+WHERE
+	PNECreditID = @PNECreditID
+
+END

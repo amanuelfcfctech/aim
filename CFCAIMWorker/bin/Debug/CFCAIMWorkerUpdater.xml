@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgramSettings>
+  <Settings>
+    <setting name="AppVersion" serializeAs="String">
+      <value>2026-09-17</value>
+    </setting>
+    <setting name="IsUpdating" serializeAs="Boolean">
+      <value>false</value>
+    </setting>
+    <setting name="ScheduledUpdateDate" serializeAs="String">
+      <value>20261017</value>
+    </setting>
+  </Settings>
+</ProgramSettings>

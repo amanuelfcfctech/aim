@@ -1,0 +1,345 @@
+﻿namespace CFCAIM.ReportDevExpress
+{
+    partial class GuaranteeComparisonBySampleReport
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+			this.components = new System.ComponentModel.Container();
+			this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+			this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+			this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+			this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+			this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+			this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblPrintedBy = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+			this.xrLblPageNo = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrPageInfoPageNo = new DevExpress.XtraReports.UI.XRPageInfo();
+			this.xrLblDate = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrPageInfoDate = new DevExpress.XtraReports.UI.XRPageInfo();
+			this.xrLblPageHeading = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+			this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
+			this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblIsActive = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblAnalyzerMaterialName = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblUpdateStamp = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+			this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+			this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+			this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+			// 
+			// Detail
+			// 
+			this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel2});
+			this.Detail.HeightF = 23.00001F;
+			this.Detail.Name = "Detail";
+			this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrLabel2
+			// 
+			this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "SampleCode")});
+			this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(182.7084F, 0F);
+			this.xrLabel2.Name = "xrLabel2";
+			this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel2.SizeF = new System.Drawing.SizeF(157.9167F, 23F);
+			// 
+			// TopMargin
+			// 
+			this.TopMargin.HeightF = 0F;
+			this.TopMargin.Name = "TopMargin";
+			this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// BottomMargin
+			// 
+			this.BottomMargin.HeightF = 1.166662F;
+			this.BottomMargin.Name = "BottomMargin";
+			this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// PageHeader
+			// 
+			this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel3,
+            this.xrLabel5,
+            this.xrLabel6,
+            this.xrLblPrintedBy,
+            this.xrPageInfo1,
+            this.xrLblPageNo,
+            this.xrPageInfoPageNo,
+            this.xrLblDate,
+            this.xrPageInfoDate,
+            this.xrLblPageHeading,
+            this.xrLine1,
+            this.xrLine2});
+			this.PageHeader.HeightF = 89.99996F;
+			this.PageHeader.Name = "PageHeader";
+			// 
+			// xrLabel3
+			// 
+			this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 64.83332F);
+			this.xrLabel3.Name = "xrLabel3";
+			this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel3.SizeF = new System.Drawing.SizeF(103.125F, 23.00001F);
+			this.xrLabel3.Text = "Nutrient Code";
+			// 
+			// xrLabel5
+			// 
+			this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(103.125F, 64.83332F);
+			this.xrLabel5.Name = "xrLabel5";
+			this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel5.SizeF = new System.Drawing.SizeF(173.3334F, 23.00001F);
+			this.xrLabel5.Text = "Nutrient Name";
+			// 
+			// xrLabel6
+			// 
+			this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(276.4584F, 64.83332F);
+			this.xrLabel6.Name = "xrLabel6";
+			this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel6.SizeF = new System.Drawing.SizeF(64.16663F, 23F);
+			this.xrLabel6.Text = "Units";
+			// 
+			// xrLblPrintedBy
+			// 
+			this.xrLblPrintedBy.LocationFloat = new DevExpress.Utils.PointFloat(451.4584F, 22.99997F);
+			this.xrLblPrintedBy.Name = "xrLblPrintedBy";
+			this.xrLblPrintedBy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblPrintedBy.SizeF = new System.Drawing.SizeF(73.95831F, 19.79167F);
+			this.xrLblPrintedBy.Text = "Printed By:";
+			// 
+			// xrPageInfo1
+			// 
+			this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(525.4166F, 22.99997F);
+			this.xrPageInfo1.Name = "xrPageInfo1";
+			this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.UserName;
+			this.xrPageInfo1.SizeF = new System.Drawing.SizeF(224.5834F, 19.79167F);
+			// 
+			// xrLblPageNo
+			// 
+			this.xrLblPageNo.LocationFloat = new DevExpress.Utils.PointFloat(615.6248F, 0F);
+			this.xrLblPageNo.Name = "xrLblPageNo";
+			this.xrLblPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblPageNo.SizeF = new System.Drawing.SizeF(63.54175F, 23F);
+			this.xrLblPageNo.Text = "PageNo.:";
+			// 
+			// xrPageInfoPageNo
+			// 
+			this.xrPageInfoPageNo.LocationFloat = new DevExpress.Utils.PointFloat(679.1666F, 0F);
+			this.xrPageInfoPageNo.Name = "xrPageInfoPageNo";
+			this.xrPageInfoPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrPageInfoPageNo.SizeF = new System.Drawing.SizeF(70.83337F, 23F);
+			this.xrPageInfoPageNo.StylePriority.UseTextAlignment = false;
+			this.xrPageInfoPageNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrLblDate
+			// 
+			this.xrLblDate.LocationFloat = new DevExpress.Utils.PointFloat(451.4584F, 0F);
+			this.xrLblDate.Name = "xrLblDate";
+			this.xrLblDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblDate.SizeF = new System.Drawing.SizeF(53.12506F, 23F);
+			this.xrLblDate.Text = "Date:";
+			// 
+			// xrPageInfoDate
+			// 
+			this.xrPageInfoDate.Format = "{0:M/d/yy h:mm tt}";
+			this.xrPageInfoDate.LocationFloat = new DevExpress.Utils.PointFloat(504.5834F, 0F);
+			this.xrPageInfoDate.Name = "xrPageInfoDate";
+			this.xrPageInfoDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrPageInfoDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+			this.xrPageInfoDate.SizeF = new System.Drawing.SizeF(111.0416F, 23F);
+			this.xrPageInfoDate.StylePriority.UseTextAlignment = false;
+			this.xrPageInfoDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrLblPageHeading
+			// 
+			this.xrLblPageHeading.Font = new DevExpress.Drawing.DXFont("Arial", 14.25F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+			this.xrLblPageHeading.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+			this.xrLblPageHeading.Name = "xrLblPageHeading";
+			this.xrLblPageHeading.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblPageHeading.SizeF = new System.Drawing.SizeF(351.0417F, 43.83335F);
+			this.xrLblPageHeading.StylePriority.UseFont = false;
+			this.xrLblPageHeading.Text = "Guarantee Comparison By Sample";
+			// 
+			// xrLine1
+			// 
+			this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43.83331F);
+			this.xrLine1.Name = "xrLine1";
+			this.xrLine1.SizeF = new System.Drawing.SizeF(750.0001F, 2.166653F);
+			// 
+			// xrLine2
+			// 
+			this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 87.83333F);
+			this.xrLine2.Name = "xrLine2";
+			this.xrLine2.SizeF = new System.Drawing.SizeF(750F, 2.166637F);
+			// 
+			// xrLabel4
+			// 
+			this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(667.7083F, 34.70831F);
+			this.xrLabel4.Name = "xrLabel4";
+			this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel4.SizeF = new System.Drawing.SizeF(82.29163F, 23.00001F);
+			this.xrLabel4.Text = "Difference";
+			// 
+			// xrLblIsActive
+			// 
+			this.xrLblIsActive.LocationFloat = new DevExpress.Utils.PointFloat(474.375F, 34.70831F);
+			this.xrLblIsActive.Name = "xrLblIsActive";
+			this.xrLblIsActive.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblIsActive.SizeF = new System.Drawing.SizeF(106.8749F, 23F);
+			this.xrLblIsActive.Text = "Nutrient Value";
+			// 
+			// xrLblAnalyzerMaterialName
+			// 
+			this.xrLblAnalyzerMaterialName.LocationFloat = new DevExpress.Utils.PointFloat(338.9584F, 34.70831F);
+			this.xrLblAnalyzerMaterialName.Name = "xrLblAnalyzerMaterialName";
+			this.xrLblAnalyzerMaterialName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblAnalyzerMaterialName.SizeF = new System.Drawing.SizeF(135.4167F, 23F);
+			this.xrLblAnalyzerMaterialName.Text = "Sample Date";
+			// 
+			// xrLblUpdateStamp
+			// 
+			this.xrLblUpdateStamp.LocationFloat = new DevExpress.Utils.PointFloat(581.2499F, 34.70831F);
+			this.xrLblUpdateStamp.Name = "xrLblUpdateStamp";
+			this.xrLblUpdateStamp.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblUpdateStamp.SizeF = new System.Drawing.SizeF(86.45837F, 23.00001F);
+			this.xrLblUpdateStamp.Text = "Guarantee";
+			// 
+			// xrLabel1
+			// 
+			this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(182.7085F, 34.70834F);
+			this.xrLabel1.Name = "xrLabel1";
+			this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel1.SizeF = new System.Drawing.SizeF(156.2499F, 23.00001F);
+			this.xrLabel1.Text = "Sample Code";
+			// 
+			// GroupHeader1
+			// 
+			this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel7,
+            this.xrLabel8,
+            this.xrLabel9,
+            this.xrLabel4,
+            this.xrLblUpdateStamp,
+            this.xrLblAnalyzerMaterialName,
+            this.xrLblIsActive,
+            this.xrLabel1});
+			this.GroupHeader1.HeightF = 58.33333F;
+			this.GroupHeader1.Name = "GroupHeader1";
+			this.GroupHeader1.RepeatEveryPage = true;
+			// 
+			// xrLabel7
+			// 
+			this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "AIMNutrientCode")});
+			this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+			this.xrLabel7.Name = "xrLabel7";
+			this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel7.SizeF = new System.Drawing.SizeF(103.125F, 23F);
+			// 
+			// xrLabel8
+			// 
+			this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "AIMNutrientName")});
+			this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(103.125F, 0F);
+			this.xrLabel8.Name = "xrLabel8";
+			this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel8.SizeF = new System.Drawing.SizeF(173.3334F, 23F);
+			// 
+			// xrLabel9
+			// 
+			this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Unit")});
+			this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(276.4584F, 0F);
+			this.xrLabel9.Name = "xrLabel9";
+			this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLabel9.SizeF = new System.Drawing.SizeF(64.16656F, 23F);
+			this.xrLabel9.Text = "xrLabel4";
+			// 
+			// bindingSource1
+			// 
+			this.bindingSource1.DataSource = typeof(CFCAIMCore.Entity.AnalysisReportsInfo);
+			// 
+			// GuaranteeComparisonBySampleReport
+			// 
+			this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Detail,
+            this.TopMargin,
+            this.BottomMargin,
+            this.PageHeader,
+            this.GroupHeader1});
+			this.DataSource = this.bindingSource1;
+			this.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+			this.Margins = new DevExpress.Drawing.DXMargins(50, 50, 0, 1);
+			this.ShowPreviewMarginLines = false;
+			this.Version = "14.2";
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPrintedBy;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPageNo;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfoPageNo;
+        private DevExpress.XtraReports.UI.XRLabel xrLblDate;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfoDate;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPageHeading;
+        private DevExpress.XtraReports.UI.XRLine xrLine1;
+        private DevExpress.XtraReports.UI.XRLine xrLine2;
+        private DevExpress.XtraReports.UI.XRLabel xrLblIsActive;
+        private DevExpress.XtraReports.UI.XRLabel xrLblAnalyzerMaterialName;
+        private DevExpress.XtraReports.UI.XRLabel xrLblUpdateStamp;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+    }
+}

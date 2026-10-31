@@ -1,0 +1,92 @@
+﻿CREATE PROCEDURE [dbo].[usp_SampleResult_SEL_SampleID_DataSourceTypeID_AllStatus]
+	  @SampleID				INT
+	, @DataSourceTypeID		INT	
+	, @SampleResultMessageType	INT
+
+-- exec usp_SampleResult_SEL_SampleID_DataSourceTypeID 4183, 1016, 4
+AS
+BEGIN
+SET NOCOUNT ON;
+
+CREATE TABLE #Outside (	
+    AnalyzerNutrientID Int, 	 
+    Message Int    )
+INSERT INTO #Outside
+EXEC usp_SampleResult_SEL_Messages_Outside @SampleResultMessageType, @SampleID, NULL, NULL
+
+CREATE TABLE #Inside (	
+    AnalyzerNutrientID Int, 	 
+    Message Int    )
+INSERT INTO #Inside
+EXEC usp_SampleResult_SEL_Messages_Inside @SampleResultMessageType, @SampleID, NULL, NULL
+
+SELECT 
+	  SR.SampleResultID
+	, SR.SampleID
+	, SR.AnalyzerNutrientID
+	, AN.AnalyzerNutrientName
+	, SR.ResultValue
+	, SR.UpdateStamp
+	, SR.IsActive
+	, SR.AnalysisDate
+	, SR.CFCUserID
+	, SR.IsCalculate
+	, AN.DataSourceTypeID
+	, SR.Unit
+	, SR.InstrumentID
+	, I.Description as InstrumentDescription
+	, AN.AnalyzerNutrientCode 	 
+
+	-- 1/11/21 - changed to remove aspnet_User table (and use CFCUser instead)
+	--, AU.UserName
+	, U.UserName
+
+	, AN.UnitType		
+	, DST.Name as DataSourceTypeName	
+	, AMN.AIMNutrientName
+	, #Outside.Message as MessageOutside
+	, #Inside.Message as MessageInside
+	
+	
+FROM 
+	dbo.SampleResult SR
+	INNER JOIN 
+		dbo.AnalyzerNutrient AN WITH(NOLOCK)
+			ON  AN.AnalyzerNutrientID = SR.AnalyzerNutrientID 
+			AND AN.IsActive = 1
+
+	LEFT JOIN #Outside 
+			ON AN.AnalyzerNutrientID = #Outside.AnalyzerNutrientID
+	LEFT OUTER JOIN #Inside
+			ON AN.AnalyzerNutrientID = #Inside.AnalyzerNutrientID
+
+	LEFT OUTER JOIN
+		dbo.DataSourceType DST with (nolock)
+			ON AN.DataSourceTypeID = DST.DataSourceTypeID	
+	LEFT OUTER JOIN
+		CFCUser.CFCUser U WITH(NOLOCK)
+			ON SR.CFCUserID = U.CFCUserID
+
+	-- 1/11/21 - changed to remove aspnet_User table (and use CFCUser instead)
+	--LEFT OUTER JOIN
+	--	dbo.aspnet_Users AU WITH(NOLOCK)
+	--		ON AU.UserId = U.UserID	
+
+	LEFT JOIN dbo.AIMNutrientRefAnalyzerNutrient XREF WITH(NOLOCK) 
+			ON XREF.AnalyzerNutrientID = AN.AnalyzerNutrientID
+	LEFT JOIN dbo.AIMNutrient AMN 
+			ON XREF.AIMNutrientID = AMN.AIMNutrientID
+	LEFT OUTER JOIN dbo.Instrument I 
+			ON SR.InstrumentID = I.InstrumentID
+
+WHERE
+
+		SR.SampleID = @SampleID
+	AND AN.DataSourceTypeID = @DataSourceTypeID
+		
+ORDER BY AN.AnalyzerNutrientCode
+
+DROP TABLE #Outside
+DROP TABLE #Inside
+
+END

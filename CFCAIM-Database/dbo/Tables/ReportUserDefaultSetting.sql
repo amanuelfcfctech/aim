@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[ReportUserDefaultSetting] (
+    [CFCUserID]             INT            NOT NULL,
+    [ReportType]            INT            NULL,
+    [FromDate]              DATETIME       NULL,
+    [ToDate]                DATETIME       NULL,
+    [MaterialType]          INT            NULL,
+    [ExtremeOutlier]        INT            NULL,
+    [MaterialGroup]         INT            NULL,
+    [MildOutlier]           INT            NULL,
+    [SortOnNutrientCode]    INT            NULL,
+    [SampleResult]          INT            NULL,
+    [AnalyzerOrFormulation] INT            NULL,
+    [QualityControl]        INT            NULL,
+    [DateSampleOrCreated]   INT            NULL,
+    [OwnerID]               INT            NULL,
+    [OwnerLocationID]       INT            NULL,
+    [SupplierID]            INT            NULL,
+    [SupplierLocationID]    INT            NULL,
+    [MaterialID]            INT            NULL,
+    [MaterialNameID]        INT            NULL,
+    [TestTypeID]            INT            NULL,
+    [TicketNumber]          NVARCHAR (100) NULL,
+    [TemplateID]            INT            NULL,
+    [CFCUserFormID]         INT            NULL,
+    [OutOfRangeOnly]        BIT            NULL,
+    [ShowViolations]        BIT            NULL
+);
+

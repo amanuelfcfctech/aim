@@ -1,0 +1,139 @@
+﻿namespace CFCAIM.ReportDevExpress
+{
+	partial class TestGraph
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+
+		/// <summary> 
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
+
+		#region Designer generated code
+
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.components = new System.ComponentModel.Container();
+			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+			DevExpress.XtraCharts.FullStackedLineSeriesView fullStackedLineSeriesView1 = new DevExpress.XtraCharts.FullStackedLineSeriesView();
+			this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+			this.xrChart1 = new DevExpress.XtraReports.UI.XRChart();
+			this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+			this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+			this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+			((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(fullStackedLineSeriesView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+			// 
+			// Detail
+			// 
+			this.Detail.HeightF = 0F;
+			this.Detail.Name = "Detail";
+			this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrChart1
+			// 
+			this.xrChart1.BorderColor = System.Drawing.Color.Black;
+			this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+			this.xrChart1.DataSource = this.bindingSource1;
+			xyDiagram1.AxisX.Label.Angle = 45;
+			xyDiagram1.AxisX.Tickmarks.Length = 10;
+			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+			xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.False;
+			xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
+			xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
+			xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
+			this.xrChart1.Diagram = xyDiagram1;
+			this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+			this.xrChart1.Name = "xrChart1";
+			this.xrChart1.SeriesDataMember = "ValueName";
+			this.xrChart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+			this.xrChart1.SeriesTemplate.ArgumentDataMember = "SampleDate";
+			this.xrChart1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+			this.xrChart1.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+			this.xrChart1.SeriesTemplate.ValueDataMembersSerializable = "Value";
+			fullStackedLineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+			this.xrChart1.SeriesTemplate.View = fullStackedLineSeriesView1;
+			this.xrChart1.SizeF = new System.Drawing.SizeF(1000F, 399.3749F);
+			this.xrChart1.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.xrChart1_BeforePrint);
+			this.xrChart1.AfterPrint += new System.EventHandler(this.xrChart1_AfterPrint);
+			// 
+			// bindingSource1
+			// 
+			this.bindingSource1.DataSource = typeof(CFCAIMCore.Entity.GraphInfo);
+			// 
+			// TopMargin
+			// 
+			this.TopMargin.HeightF = 68.75F;
+			this.TopMargin.Name = "TopMargin";
+			this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// BottomMargin
+			// 
+			this.BottomMargin.HeightF = 50F;
+			this.BottomMargin.Name = "BottomMargin";
+			this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// GroupHeader1
+			// 
+			this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrChart1});
+			this.GroupHeader1.HeightF = 399.3749F;
+			this.GroupHeader1.Name = "GroupHeader1";
+			// 
+			// TestGraph
+			// 
+			this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Detail,
+            this.TopMargin,
+            this.BottomMargin,
+            this.GroupHeader1});
+			this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
+            this.bindingSource1});
+			this.DataSource = this.bindingSource1;
+			this.Landscape = true;
+			this.Margins = new DevExpress.Drawing.DXMargins(50, 50, 69, 50);
+			this.PageHeight = 850;
+			this.PageWidth = 1100;
+			this.Version = "15.1";
+			this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.TestGraph_BeforePrint);
+			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(fullStackedLineSeriesView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.xrChart1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+
+		}
+
+		#endregion
+
+		private DevExpress.XtraReports.UI.DetailBand Detail;
+		private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRChart xrChart1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+	}
+}

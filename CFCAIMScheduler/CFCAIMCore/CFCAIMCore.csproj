@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CE696D9-F7E7-43AB-985F-462E06E946F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CFCAIMCore</RootNamespace>
+    <AssemblyName>CFCAIMCore</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Core.Library, Version=1.1.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SharedBinaries\CFC Tech\CFCCore\DevExpress24.1\Core.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=28.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\CsvHelper.28.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v24.1.Drawing, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\Microsoft.Bcl.HashCode.1.0.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\Microsoft\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\RestSharp\105.0.1 Net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\CFCAIM\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataExchange\Bruker\SQL.cs" />
+    <Compile Include="DataExchange\Concept5\FullSync.cs" />
+    <Compile Include="Data\DirectDataAccess.cs" />
+    <Compile Include="Data\BrukerDataAccess.cs" />
+    <Compile Include="Entity\Adisseo\API\AnalysesMaterialInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\AnalysisResultsInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\AnanlysisResultParameterInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\APICreditInfo.cs" />
+    <Compile Include="Entity\Adisseo\PNECreditInfo.cs" />
+    <Compile Include="Entity\Adisseo\PNEForAnalyzerMaterialRefAnalyzerNutrientInfo.cs" />
+    <Compile Include="Entity\Adisseo\PNEMaterialSampleTypeInfo.cs" />
+    <Compile Include="Entity\Adisseo\PNEMaterialSampleTypeRefGroundUnGroundInfo.cs" />
+    <Compile Include="Entity\Adisseo\PNEMaterialTypeInfo.cs" />
+    <Compile Include="Entity\AIMCoreGlobal.cs" />
+    <Compile Include="Data\AIMDataAccess.cs" />
+    <Compile Include="Entity\AIMMessageInfo.cs" />
+    <Compile Include="Entity\AIMMessageUserInfo.cs" />
+    <Compile Include="Entity\AIMOwnerLocationGroupDetailInfo.cs" />
+    <Compile Include="Entity\AIM\AIMMaterialGroupDetailInfo.cs" />
+    <Compile Include="Entity\AIM\AIMMaterialGroupHeaderInfo.cs" />
+    <Compile Include="Entity\AIM\AIMMaterialGroupNutrientInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierGroupDetailInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierGroupInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierLocationGroupInfo.cs" />
+    <Compile Include="Entity\AIM\xAIMSupplierLocationGroupInfo.cs" />
+    <Compile Include="Entity\AIM\ProductToleranceProductCodesInfo.cs" />
+    <Compile Include="Entity\AIM\AIMMaterialStockStatusInfo.cs" />
+    <Compile Include="Entity\AIM\AIMNutrientDriverInfo.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerLocationGroupInfo.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerLocationSortInfo.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerSortInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierLocationGroupedInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierLocationSortInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierSortInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierSupplierLocationRefAnalyzerSupplierLocationCombinedInfo.cs" />
+    <Compile Include="Entity\AIM\AIMUpdateLog.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerLocationRefAnalyzerOwnerLocationInfo.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerRefAnalyzerOwnerInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierLocationRefAnalyzerSupplierLocationInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierRefAnalyzerSupplier.cs" />
+    <Compile Include="Entity\AIM\AnalyzerCrossReferenceMassUpdateInfo.cs" />
+    <Compile Include="Entity\AIM\SpecificIngredientsInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entity\AIM\SpecificIngredientsInfo.Designer.cs">
+      <DependentUpon>SpecificIngredientsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Analysis\AnalysisFilterInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisProductInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisUserDefaultSettingsInfo.cs" />
+    <Compile Include="Entity\Analysis\UpdateIngredientLogInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerDataSourceTypeInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerOwnerInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerOwnerLocationInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerSupplierInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerSupplierLocationCombined.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerSupplierLocationInfo.cs" />
+    <Compile Include="Entity\Analyzer\DataSourceDetailInfo.cs" />
+    <Compile Include="Entity\Analyzer\DataSourceHeaderInfo.cs" />
+    <Compile Include="Entity\API\APIPendingAIMMaterialInfo.cs" />
+    <Compile Include="Entity\App Setting\AlternateNameInfo.cs" />
+    <Compile Include="Entity\App Setting\ControlInfo.cs" />
+    <Compile Include="Entity\App Setting\PrinterDefaultInfo.cs" />
+    <Compile Include="Entity\App Setting\PrinterUserDefaultInfo.cs" />
+    <Compile Include="Entity\ApplicationInfo.cs" />
+    <Compile Include="Entity\BatchIDInfo.cs" />
+    <Compile Include="Entity\BatchInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerCFCLogResultInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerCFCLogSpectrumInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerFileListInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSampleInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSampleResultReceiveInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSampleResultSentInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSampleResultInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSentLogInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSpectrumInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSpectrumListInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSpectrumReceiveInfo.cs" />
+    <Compile Include="Entity\Bruker\BrukerSpectrumSentInfo.cs" />
+    <Compile Include="Entity\CFCAPI\APILogInfo.cs" />
+    <Compile Include="Entity\CFCAPI\APISprectrumLogInfo.cs" />
+    <Compile Include="Entity\CFCAPI\APITokenInfo.cs" />
+    <Compile Include="Entity\CFCAPI\APITokenV1Info.cs" />
+    <Compile Include="Entity\CFCAPI\CustomerInfo.cs" />
+    <Compile Include="Entity\CFCAPI\InstrumentInfo.cs" />
+    <Compile Include="Entity\CFCAPI\LabInfo.cs" />
+    <Compile Include="Entity\CFCAPI\TokenInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCIngredientNutrientOverlayInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCIngredientProductCombinedInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCProductArchiveInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCProductArchiveSpecInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCProductSpecInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCProductTypeInfo.cs" />
+    <Compile Include="Entity\ChartSampleListInfo.cs" />
+    <Compile Include="Entity\ColumnDescriptionOverrideInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCProductArchiveNutrientInfo.cs" />
+    <Compile Include="Entity\DatabaseInfo.cs" />
+    <Compile Include="DataExchange\Adisseo\API.cs" />
+    <Compile Include="DataExchange\Adisseo\CSV.cs" />
+    <Compile Include="DataExchange\DataExchangeManager.cs" />
+    <Compile Include="DataExchange\Evonik\CSV.cs" />
+    <Compile Include="DataExchange\Foss\CSV.cs" />
+    <Compile Include="Entity\Adisseo\API\AnalysesInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\AnalysisRequestInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\AnalysisResultInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\APIParameterInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\MaterialInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\AnalysisRequestParameterInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\ParameterResultInfo.cs" />
+    <Compile Include="Entity\Adisseo\API\PredictRangeInfo.cs" />
+    <Compile Include="Entity\AIM\AIMConfigInfo.cs" />
+    <Compile Include="Entity\AIM\AIMDatabaseInfo.cs" />
+    <Compile Include="Entity\AIM\AIMIngredientInfo.cs" />
+    <Compile Include="Entity\AIM\AIMMaterialInfo.cs" />
+    <Compile Include="Entity\AIM\AIMMaterialRefAnalyzerMaterialInfo.cs" />
+    <Compile Include="Entity\AIM\AIMNutrientInfo.cs" />
+    <Compile Include="Entity\AIM\AIMNutrientRefAnalyzerNutrientInfo.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerLocation.cs" />
+    <Compile Include="Entity\AIM\AIMOwnerLocationInfo.cs" />
+    <Compile Include="Entity\AIM\AIMPriorityUsedValueInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierLocationGuaranteeInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSupplierLocationInfo.cs" />
+    <Compile Include="Entity\AIM\AIMSyncInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisExportBatchMaintenance.cs" />
+    <Compile Include="Entity\Analysis\AnalysisExportBatchMaintenanceDetail.cs" />
+    <Compile Include="Entity\Analysis\AnalysisGroupByForUpdate.cs" />
+    <Compile Include="Entity\Analysis\AnalysisInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisLogInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisQueryDetailInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisQueryTemplateInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisReportsInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisUpdateIngredientHeader.cs" />
+    <Compile Include="Entity\Analysis\AnalysisViewTemplateInfo.cs" />
+    <Compile Include="Entity\Analysis\AnalysisViewTemplateNameInfo.cs" />
+    <Compile Include="Entity\AIM\OwnerInfo.cs" />
+    <Compile Include="Entity\AIM\ViewTemplateInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerAnalyseInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerInstrument.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerInstrumentFilesInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerMaterialInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerMaterialRefAnalyzerAnalyseInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerNutrientInfo.cs" />
+    <Compile Include="Entity\Analyzer\AnalyzerPendingSampleInfo.cs" />
+    <Compile Include="Entity\App Setting\EmailAddress.cs" />
+    <Compile Include="Entity\App Setting\PrinterType.cs" />
+    <Compile Include="Entity\App Setting\TabOrderInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCIngredientInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCNutrientInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCPlantInfo.cs" />
+    <Compile Include="Entity\CFCData\CFCProductInfo.cs" />
+    <Compile Include="Entity\CFCUserInfo.cs" />
+    <Compile Include="Entity\Column.cs" />
+    <Compile Include="Entity\CrossReference\CFCIngredientRefAIMMaterialInfo.cs" />
+    <Compile Include="Entity\CrossReference\CFCNutrientAIMNutrientRefInfo.cs" />
+    <Compile Include="Entity\CrossReference\CFCNutrientNIRNutrientRefInfo.cs" />
+    <Compile Include="Entity\CrossReference\CFCPlantAIMOwnerLocationRefInfo.cs" />
+    <Compile Include="Entity\CrossReference\CFCProductRefAIMMaterialInfo.cs" />
+    <Compile Include="Entity\DataSourceAllTypesInfo.cs" />
+    <Compile Include="Entity\DataSourceComparisonInfo.cs" />
+    <Compile Include="Entity\DateFormatInfo.cs" />
+    <Compile Include="Entity\DayInfo.cs" />
+    <Compile Include="Entity\DecimalSeparatorInfo.cs" />
+    <Compile Include="Entity\DefaultSettingsInfo.cs" />
+    <Compile Include="Entity\EmailAddressXRefMessageInfo.cs" />
+    <Compile Include="Entity\Enums.cs" />
+    <Compile Include="Entity\DataSourceTypeInfo.cs" />
+    <Compile Include="Entity\DataSourceTypeRefFileTypeInfo.cs" />
+    <Compile Include="Entity\DelimiterTypeInfo.cs" />
+    <Compile Include="Entity\Event\DayInfo.cs" />
+    <Compile Include="Entity\Event\EventMonthlyInfo.cs" />
+    <Compile Include="Entity\Event\EventMonthlySpecificDaysInfo.cs" />
+    <Compile Include="Entity\Event\EventMonthlySpecificWeekDaysInfo.cs" />
+    <Compile Include="Entity\Event\EventRunTypeInfo.cs" />
+    <Compile Include="Entity\Event\EventsInfo.cs" />
+    <Compile Include="Entity\Event\EventTypeInfo.cs" />
+    <Compile Include="Entity\Event\EventWeeklyInfo.cs" />
+    <Compile Include="Entity\Event\MonthInfo.cs" />
+    <Compile Include="Entity\Event\WeekInfo.cs" />
+    <Compile Include="Entity\Event\WeekNumberInfo.cs" />
+    <Compile Include="Entity\ExcelFileType.cs" />
+    <Compile Include="Entity\ExportIngredientGroupInfo.cs" />
+    <Compile Include="Entity\ExportIngredientInfo.cs" />
+    <Compile Include="Entity\ExportPlantGroupInfo.cs" />
+    <Compile Include="Entity\ExportPlantInfo.cs" />
+    <Compile Include="Entity\Export\SampleXmlInfo.cs" />
+    <Compile Include="Entity\FileTypeInfo.cs" />
+    <Compile Include="Entity\FileTypeRefDelimiterTypeInfo.cs" />
+    <Compile Include="Entity\Errors\ErrorInfo.cs" />
+    <Compile Include="Entity\Event\EventDayInfo.cs" />
+    <Compile Include="Entity\Files\FileColumnTypeInfo.cs" />
+    <Compile Include="Entity\Files\FilesCountInfo.cs" />
+    <Compile Include="Entity\Files\FilesInfo.cs" />
+    <Compile Include="Entity\Foss\FossResultInfo.cs" />
+    <Compile Include="Entity\Foss\FossSampleInfo.cs" />
+    <Compile Include="Entity\Foss\FossSampleResultInfo.cs" />
+    <Compile Include="Entity\Foss\FossSampleResultSentInfo.cs" />
+    <Compile Include="Entity\Foss\FossSentLogInfo.cs" />
+    <Compile Include="Entity\Foss\FossSpectrumInfo.cs" />
+    <Compile Include="Entity\Foss\FossSpectrumReceiveInfo.cs" />
+    <Compile Include="Entity\Foss\FossSpectrumSentInfo.cs" />
+    <Compile Include="Entity\GraphProductControlInfo.cs" />
+    <Compile Include="Entity\GroundUnGroundInfo.cs" />
+    <Compile Include="Entity\GuaranteeRefundDetailInfo.cs" />
+    <Compile Include="Entity\GuaranteeRefundHeaderInfo.cs" />
+    <Compile Include="Entity\Import\BrukerSqlInfo.cs" />
+    <Compile Include="Entity\Import\FossXML0.cs" />
+    <Compile Include="Entity\Import\FossXML1.cs" />
+    <Compile Include="Entity\Import\FossXML2.cs" />
+    <Compile Include="Entity\Import\FosXMLinfo.cs" />
+    <Compile Include="Entity\Import\ImportConfigInfo.cs" />
+    <Compile Include="Entity\Import\ImportDetailInfo.cs" />
+    <Compile Include="Entity\Import\ImportFileTypeInfo.cs" />
+    <Compile Include="Entity\Import\ImportHeaderInfo.cs" />
+    <Compile Include="Entity\Import\ImportSQLSampleLog.cs" />
+    <Compile Include="Entity\Import\ImportSQLSampleMissingInfo.cs" />
+    <Compile Include="Entity\Import\InternalImportValidateSampleInfo.cs" />
+    <Compile Include="Entity\Import\MapColumnNamesInfo.cs" />
+    <Compile Include="Entity\Import\PertenSqlInfo.cs" />
+    <Compile Include="Entity\Import\SampleColumnNamesInfo.cs" />
+    <Compile Include="Entity\Import\SampleImportLogDetailInfo.cs" />
+    <Compile Include="Entity\Import\SampleImportLogInfo.cs" />
+    <Compile Include="Entity\Import\SampleImportRequiredFieldsInfo.cs" />
+    <Compile Include="Entity\Import\SampleImportUserDefinedMapSelectionInfo.cs" />
+    <Compile Include="Entity\Import\SystemImportCFCTechXMLSampleInfo.cs" />
+    <Compile Include="Entity\IngredientExportBatchDetailInfo.cs" />
+    <Compile Include="Entity\IngredientExportBatchInfo.cs" />
+    <Compile Include="Entity\InternalImportValidateSampleInfo.cs" />
+    <Compile Include="Entity\LabelsInfo.cs" />
+    <Compile Include="Entity\LicensingConfigInfo.cs" />
+    <Compile Include="Entity\ListInfo.cs" />
+    <Compile Include="Entity\MaterialTypeInfo.cs" />
+    <Compile Include="Entity\MathTypeInfo.cs" />
+    <Compile Include="Entity\NutrientToleranceDetailInfo.cs" />
+    <Compile Include="Entity\NutrientToleranceDetailTarget.cs" />
+    <Compile Include="Entity\NutrientToleranceHeaderInfo.cs" />
+    <Compile Include="Entity\PivotGridTestInfo.cs" />
+    <Compile Include="Entity\PlusMinusInfo.cs" />
+    <Compile Include="Entity\ProductToleranceDetailInfo.cs" />
+    <Compile Include="Entity\ProductToleranceHeaderInfo.cs" />
+    <Compile Include="Entity\ProductToleranceNutrientInfo.cs" />
+    <Compile Include="Entity\ProgressBarInfo.cs" />
+    <Compile Include="Entity\QueryOperationSampleDateInfo.cs" />
+    <Compile Include="Entity\Report\AimMaterialRefAnalyzerMaterialOrphanInfo.cs" />
+    <Compile Include="Entity\Report\AimNutrientRefAnalyzerNutrientOrphanInfo.cs" />
+    <Compile Include="Entity\Report\AimSourceLocationGuaranteeReportInfo.cs" />
+    <Compile Include="Entity\ChartInfo.cs" />
+    <Compile Include="Entity\Report\ExportBatchLogInfo.cs" />
+    <Compile Include="Entity\Report\ExportBatchMaintenanceReportInfo.cs" />
+    <Compile Include="Entity\Report\FormulationInfo.cs" />
+    <Compile Include="Entity\Report\GraphHeaderInfo.cs" />
+    <Compile Include="Entity\GraphInfo.cs" />
+    <Compile Include="Entity\Report\ManufacturedProductComplianceReportInfo.cs" />
+    <Compile Include="Entity\Report\ReportAlternateNamesInfo.cs" />
+    <Compile Include="Entity\Report\ReportInfo.cs" />
+    <Compile Include="Entity\Report\ReportCommentsInfo.cs" />
+    <Compile Include="Entity\Report\ReportQueryDetailInfo.cs" />
+    <Compile Include="Entity\Report\ReportQueryInfo.cs" />
+    <Compile Include="Entity\Report\SampleActivityReportInfo.cs" />
+    <Compile Include="Entity\Report\SampleAnalysisRequestFormInfo.cs" />
+    <Compile Include="Entity\Report\SampleComparisonReportInfo.cs" />
+    <Compile Include="Entity\Report\SampleCustomReportInfo.cs" />
+    <Compile Include="Entity\Report\SampleHeaderInfo.cs" />
+    <Compile Include="Entity\Report\SampleResultsBySupplierInfo.cs" />
+    <Compile Include="Entity\Report\SampleResultsComparisonReportInfo.cs" />
+    <Compile Include="Entity\Report\SampleSubmittedSamplesReportInfo.cs" />
+    <Compile Include="Entity\SampleForGraphTestInfo.cs" />
+    <Compile Include="Entity\SampleFurtherAnalysisInfo.cs" />
+    <Compile Include="Entity\SampleQualityControl\SampleQualityControlMassEntryDetailInfo.cs" />
+    <Compile Include="Entity\SampleQualityControl\SampleQualityControlMassEntryInfo.cs" />
+    <Compile Include="Entity\SampleQualityControl\SampleQualityEquationBuildInfo.cs" />
+    <Compile Include="Entity\SampleQualityControl\SampleQualityEquationInfo.cs" />
+    <Compile Include="Entity\SampleQualityControl\SampleQualityInfo.cs" />
+    <Compile Include="Entity\SampleQualityControl\SampleQualityParameterInfo.cs" />
+    <Compile Include="Entity\Sample\SampleAIMRefCFCUserInfo.cs" />
+    <Compile Include="Entity\Sample\SampleExportDetailInfo.cs" />
+    <Compile Include="Entity\Sample\SampleExportHeaderInfo.cs" />
+    <Compile Include="Entity\Sample\SampleExportTemplateInfo.cs" />
+    <Compile Include="Entity\Sample\SampleInfo.cs" />
+    <Compile Include="Entity\Sample\SampleLabelInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTabControlPageInfo.cs" />
+    <Compile Include="Entity\Report\ReportPrintLayoutInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTestTypeDetailInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTestTypeInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTestTypeResultInfo.cs" />
+    <Compile Include="Entity\Sample\SampleLogInfo.cs" />
+    <Compile Include="Entity\Sample\SampleMessageDetailInfo.cs" />
+    <Compile Include="Entity\Sample\SampleNumberOfDays.cs" />
+    <Compile Include="Entity\Sample\SampleQualityControlInfo.cs" />
+    <Compile Include="Entity\Sample\SampleResultInfo.cs" />
+    <Compile Include="Entity\Sample\SampleResultPredictInfo.cs" />
+    <Compile Include="Entity\Sample\SampleResultTemplateDetailInfo.cs" />
+    <Compile Include="Entity\Sample\SampleResultTemplateInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTableStructureInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTypeInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTestTypeGroupDetailInfo.cs" />
+    <Compile Include="Entity\Sample\SampleTestTypeGroupInfo.cs" />
+    <Compile Include="Entity\SettingInfo.cs" />
+    <Compile Include="Entity\SettingsConcept5Info.cs" />
+    <Compile Include="Entity\ShowCodeNameOrBothInfo.cs" />
+    <Compile Include="Entity\SpecificIngredientsGroupInfo.cs" />
+    <Compile Include="Entity\SpecificIngredientsInfo.cs" />
+    <Compile Include="Entity\SpecificProductsGroupInfo.cs" />
+    <Compile Include="Entity\SpecificProductsInfo.cs" />
+    <Compile Include="Entity\SystemLogInfo.cs" />
+    <Compile Include="Entity\SystemMasterAndDatabaseFilesInfo.cs" />
+    <Compile Include="Entity\SystemSettingsInfo.cs" />
+    <Compile Include="Entity\TableColumnInfo.cs" />
+    <Compile Include="Entity\Template\QueryAndOrInfo.cs" />
+    <Compile Include="Entity\Template\QueryFieldInfo.cs" />
+    <Compile Include="Entity\Template\QueryOperationInfo.cs" />
+    <Compile Include="Entity\Template\QueryTemplateDetailInfo.cs" />
+    <Compile Include="Entity\Template\QueryTemplateDetailNutrientInfo.cs" />
+    <Compile Include="Entity\Template\QueryTemplateInfo.cs" />
+    <Compile Include="Entity\Template\TemplateMaterialNutrientInfo.cs" />
+    <Compile Include="Entity\UnitTypeInfo.cs" />
+    <Compile Include="Entity\UserAccessInfo.cs" />
+    <Compile Include="Entity\UserDefaultsInfo.cs" />
+    <Compile Include="Entity\UserDefined.cs" />
+    <Compile Include="Entity\UserDefined\UserDefinedDataSourceDefinitionInfo.cs" />
+    <Compile Include="Entity\UserDefined\UserDefinedDataSourceTemplateInfo.cs" />
+    <Compile Include="Entity\VersionInfo.cs" />
+    <Compile Include="Entity\WarningLimitsInfo.cs" />
+    <Compile Include="Entity\WebServiceInfo.cs" />
+    <Compile Include="Entity\XML\CFCTechXmlHeaderInfo.cs" />
+    <Compile Include="Entity\XML\CFCTechXMLResultsInfo.cs" />
+    <Compile Include="Entity\XML\CFCTechXMLSampleInfo.cs" />
+    <Compile Include="Entity\YesNoInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Manager\AIMManager.cs" />
+    <Compile Include="Manager\APIManager.cs" />
+    <Compile Include="Entity\XML\NutriQuestXmlHeaderInfo.cs" />
+    <Compile Include="Entity\XML\NutriQuestXmlPropertyInfo.cs" />
+    <Compile Include="Entity\XML\NutriQuestXmlSampleInfo.cs" />
+    <Compile Include="Manager\CFCAPIManager.cs" />
+    <Compile Include="Manager\DirectManager.cs" />
+    <Compile Include="Manager\BrukerManager.cs" />
+    <Compile Include="xPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xPDF.Designer.cs">
+      <DependentUpon>xPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\Enums\" />
+    <Folder Include="Entity\NIR\" />
+    <Folder Include="Entity\Template\UserDefined\" />
+    <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xPDF.resx">
+      <DependentUpon>xPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

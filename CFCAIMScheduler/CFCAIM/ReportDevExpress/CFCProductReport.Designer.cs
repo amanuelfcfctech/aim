@@ -1,0 +1,219 @@
+﻿namespace CFCAIM.ReportDevExpress
+{
+    partial class CFCProductReport
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLblPrintedBy = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.xrLblPageNo = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPageInfoPageNo = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.xrLblDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPageInfoDate = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.xrLblPageHeading = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLblAnalyzerMaterialName = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLblIsActive = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLblUpdateStamp = new DevExpress.XtraReports.UI.XRLabel();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.Name = "Detail";
+            this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // TopMargin
+            // 
+            this.TopMargin.HeightF = 50F;
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.HeightF = 50F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // PageHeader
+            // 
+            this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
+            this.xrLblPrintedBy,
+            this.xrPageInfo1,
+            this.xrLblPageNo,
+            this.xrPageInfoPageNo,
+            this.xrLblDate,
+            this.xrPageInfoDate,
+            this.xrLblPageHeading,
+            this.xrLine1,
+            this.xrLblAnalyzerMaterialName,
+            this.xrLblIsActive,
+            this.xrLblUpdateStamp});
+            this.PageHeader.Name = "PageHeader";
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 72F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(128.125F, 23F);
+            this.xrLabel1.Text = "Product Code";
+            // 
+            // xrLblPrintedBy
+            // 
+            this.xrLblPrintedBy.LocationFloat = new DevExpress.Utils.PointFloat(451.4583F, 28.00001F);
+            this.xrLblPrintedBy.Name = "xrLblPrintedBy";
+            this.xrLblPrintedBy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblPrintedBy.SizeF = new System.Drawing.SizeF(73.95831F, 19.79167F);
+            this.xrLblPrintedBy.Text = "Printed By:";
+            // 
+            // xrPageInfo1
+            // 
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(525.4166F, 28.00001F);
+            this.xrPageInfo1.Name = "xrPageInfo1";
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.UserName;
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(224.5834F, 19.79167F);
+            // 
+            // xrLblPageNo
+            // 
+            this.xrLblPageNo.LocationFloat = new DevExpress.Utils.PointFloat(615.6248F, 4.999996F);
+            this.xrLblPageNo.Name = "xrLblPageNo";
+            this.xrLblPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblPageNo.SizeF = new System.Drawing.SizeF(63.54175F, 23F);
+            this.xrLblPageNo.Text = "PageNo.:";
+            // 
+            // xrPageInfoPageNo
+            // 
+            this.xrPageInfoPageNo.LocationFloat = new DevExpress.Utils.PointFloat(679.1665F, 4.999996F);
+            this.xrPageInfoPageNo.Name = "xrPageInfoPageNo";
+            this.xrPageInfoPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPageInfoPageNo.SizeF = new System.Drawing.SizeF(70.83337F, 23F);
+            this.xrPageInfoPageNo.StylePriority.UseTextAlignment = false;
+            this.xrPageInfoPageNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLblDate
+            // 
+            this.xrLblDate.LocationFloat = new DevExpress.Utils.PointFloat(451.4583F, 4.999996F);
+            this.xrLblDate.Name = "xrLblDate";
+            this.xrLblDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblDate.SizeF = new System.Drawing.SizeF(53.12506F, 23F);
+            this.xrLblDate.Text = "Date:";
+            // 
+            // xrPageInfoDate
+            // 
+            this.xrPageInfoDate.Format = "{0:M/d/yy h:mm tt}";
+            this.xrPageInfoDate.LocationFloat = new DevExpress.Utils.PointFloat(504.5833F, 5.000028F);
+            this.xrPageInfoDate.Name = "xrPageInfoDate";
+            this.xrPageInfoDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPageInfoDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.xrPageInfoDate.SizeF = new System.Drawing.SizeF(111.0416F, 23F);
+            this.xrPageInfoDate.StylePriority.UseTextAlignment = false;
+            this.xrPageInfoDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLblPageHeading
+            // 
+            this.xrLblPageHeading.Font = new DevExpress.Drawing.DXFont("Arial", 21.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLblPageHeading.LocationFloat = new DevExpress.Utils.PointFloat(0F, 4.999996F);
+            this.xrLblPageHeading.Name = "xrLblPageHeading";
+            this.xrLblPageHeading.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblPageHeading.SizeF = new System.Drawing.SizeF(351.0417F, 43.83335F);
+            this.xrLblPageHeading.StylePriority.UseFont = false;
+            this.xrLblPageHeading.Text = "CFC Product";
+            // 
+            // xrLine1
+            // 
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 48.83335F);
+            this.xrLine1.Name = "xrLine1";
+            this.xrLine1.SizeF = new System.Drawing.SizeF(750.0001F, 2.166653F);
+            // 
+            // xrLblAnalyzerMaterialName
+            // 
+            this.xrLblAnalyzerMaterialName.LocationFloat = new DevExpress.Utils.PointFloat(152.7082F, 72F);
+            this.xrLblAnalyzerMaterialName.Name = "xrLblAnalyzerMaterialName";
+            this.xrLblAnalyzerMaterialName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblAnalyzerMaterialName.SizeF = new System.Drawing.SizeF(128.125F, 23F);
+            this.xrLblAnalyzerMaterialName.Text = "Product Name";
+            // 
+            // xrLblIsActive
+            // 
+            this.xrLblIsActive.LocationFloat = new DevExpress.Utils.PointFloat(451.4583F, 72F);
+            this.xrLblIsActive.Name = "xrLblIsActive";
+            this.xrLblIsActive.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblIsActive.SizeF = new System.Drawing.SizeF(64.16663F, 23F);
+            this.xrLblIsActive.Text = "Is Active";
+            // 
+            // xrLblUpdateStamp
+            // 
+            this.xrLblUpdateStamp.LocationFloat = new DevExpress.Utils.PointFloat(574.9999F, 72F);
+            this.xrLblUpdateStamp.Name = "xrLblUpdateStamp";
+            this.xrLblUpdateStamp.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLblUpdateStamp.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLblUpdateStamp.Text = "UpdateStamp";
+            // 
+            // CFCProductReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Detail,
+            this.TopMargin,
+            this.BottomMargin,
+            this.PageHeader});
+            this.Margins = new DevExpress.Drawing.DXMargins(50, 50, 50, 50);
+            this.ShowPreviewMarginLines = false;
+            this.Version = "13.2";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPrintedBy;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPageNo;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfoPageNo;
+        private DevExpress.XtraReports.UI.XRLabel xrLblDate;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfoDate;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPageHeading;
+        private DevExpress.XtraReports.UI.XRLine xrLine1;
+        private DevExpress.XtraReports.UI.XRLabel xrLblAnalyzerMaterialName;
+        private DevExpress.XtraReports.UI.XRLabel xrLblIsActive;
+        private DevExpress.XtraReports.UI.XRLabel xrLblUpdateStamp;
+    }
+}

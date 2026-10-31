@@ -1,0 +1,20 @@
+﻿CREATE PROCEDURE [dbo].[usp_DataSourceType_SEL_Name]
+				@Name NVARCHAR(30) 
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SELECT
+	  DST.*
+	
+FROM 
+	dbo.DataSourceType DST WITH(NOLOCK)
+	LEFT OUTER JOIN
+		CFCUser.CFCUser U WITH(NOLOCK)
+			ON DST.CFCUserID = U.CFCUserID
+
+WHERE 	
+	DST.Name = @Name
+
+
+END

@@ -1,0 +1,122 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CFCAIM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppVersion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">17.02.07.1</Value>
+    </Setting>
+    <Setting Name="VersionFileLink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.dropbox.com/s/x3138uzavqs1ei4/configWeb.xml?dl=1</Value>
+    </Setting>
+    <Setting Name="AppName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CFC AIMS</Value>
+    </Setting>
+    <Setting Name="UpdateVersion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="CFCAIM_UpdaterService_AppUpdaterWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://webservices.cfc:8010/AppUpdaterWebService.asmx</Value>
+    </Setting>
+    <Setting Name="FossCSV" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\FossCSV</Value>
+    </Setting>
+    <Setting Name="FossNIR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\FossNIR</Value>
+    </Setting>
+    <Setting Name="QueryForAnalysisReport" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+        SELECT
+        SR.AnalyzerNutrientID
+        , SR.AnalyzerNutrientCode
+        , STDEV(SR.ResultValue) AS StandardDeviation
+        , AVG(SR.ResultValue) AS Mean
+        , AO.OwnerName
+        , AOL.LocationName
+        , SS.SourceName
+        , SL.SourceLocationName
+        , ISNULL(CN.CFCNutrientCode, SR.AnalyzerNutrientCode) AS CFCNutrientCode
+        , ISNULL(CN.CFCNutrientName,
+        CASE WHEN CN.CFCNutrientCode IS NULL THEN
+        Analyzer.AnalyzerNutrientCode
+        ELSE
+        ''
+        END) AS CFCNutrientName
+        , CI.CFCIngredientID
+        , CI.CFCIngredientCode
+        , CI.CFCIngredientName
+        , CP.CFCProductID
+        , CP.CFCProductCode
+        , CP.CFCProductName
+        , CN.Unit
+        FROM
+        dbo.Sample S WITH(NOLOCK)
+        INNER JOIN
+        dbo.SampleResult SR WITH(NOLOCK)
+        ON	SR.SampleID = S.SampleID
+        AND	SR.IsActive = 1
+        LEFT OUTER JOIN
+        dbo.AIMOwner AO WITH(NOLOCK)
+        ON AO.AIMOwnerID = S.AIMOwnerID
+        LEFT OUTER JOIN
+        dbo.AIMOwnerLocation AOL WITH(NOLOCK)
+        ON AOL.AIMOwnerLocationID = S.AIMOwnerLocationID
+        LEFT OUTER JOIN
+        dbo.AIMSource SS WITH(NOLOCK)
+        ON SS.AIMSourceID = S.AIMSourceID
+        LEFT OUTER JOIN
+        dbo.AIMSourceLocation SL WITH(NOLOCK)
+        ON SL.AIMSourceLocationID = S.AIMSourceLocationID
+        LEFT OUTER JOIN
+        dbo.CFCNutrientRefAIMNutrient CNNNR WITH(NOLOCK)
+        ON CNNNR.AIMNutrientID = SR.AnalyzerNutrientID
+        LEFT OUTER JOIN
+        dbo.CFCNutrient CN WITH(NOLOCK)
+        ON CN.CFCNutrientID = CNNNR.CFCNutrientID
+        LEFT OUTER JOIN
+        dbo.AnalyzerNutrient Analyzer WITH(NOLOCK)
+        ON Analyzer.AnalyzerNutrientID = SR.AnalyzerNutrientID
+        LEFT OUTER JOIN
+        dbo.CFCIngredientRefAIMMaterial CIAnalyzer WITH(NOLOCK)
+        ON CIAnalyzer.AIMMaterialID = S.AnalyzerMaterialID
+        LEFT OUTER JOIN
+        dbo.CFCIngredient CI WITH(NOLOCK)
+        ON CI.CFCIngredientID = CIAnalyzer.CFCIngredientID
+        LEFT OUTER JOIN
+        dbo.CFCProductRefAIMMaterial CPNIP WITH(NOLOCK)
+        ON CPNIP.CFCProductID = S.AnalyzerMaterialID
+        LEFT OUTER JOIN
+        dbo.CFCProduct CP WITH(NOLOCK)
+        ON CP.CFCProductID = CPNIP.CFCProductID
+
+        [whereClause]
+
+        GROUP BY
+        SR.AnalyzerNutrientID
+        , SR.AnalyzerNutrientCode
+        , AO.OwnerName
+        , AOL.LocationName
+        , SS.SourceName
+        , SL.SourceLocationName
+        , CN.CFCNutrientCode
+        , ISNULL(CN.CFCNutrientName,
+        CASE WHEN CN.CFCNutrientCode IS NULL THEN
+        Analyzer.AnalyzerNutrientCode
+        ELSE
+        ''
+        END)
+        , CI.CFCIngredientID
+        , CI.CFCIngredientCode
+        , CI.CFCIngredientName
+        , CP.CFCProductID
+        , CP.CFCProductCode
+        , CP.CFCProductName
+        , CN.Unit</Value>
+    </Setting>
+    <Setting Name="DemoDatabaseName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CFCAIMDEM</Value>
+    </Setting>
+    <Setting Name="DemoInstanceName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CFCAIMDEM</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

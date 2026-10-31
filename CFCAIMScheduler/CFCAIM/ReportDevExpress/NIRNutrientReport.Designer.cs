@@ -1,0 +1,307 @@
+﻿namespace CFCAIM.ReportDevExpress
+{
+    partial class AnalyzerNutrientReport
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+			this.components = new System.ComponentModel.Container();
+			this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+			this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
+			this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+			this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+			this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+			this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+			this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
+			this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+			this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+			this.xrLblAIMPlantCode = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblAIMPlantName = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblAIMPlantIsActive = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblAIMPlantUpdateStamp = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
+			this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+			this.xrPageInfoDate = new DevExpress.XtraReports.UI.XRPageInfo();
+			this.xrLblDate = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrPageInfoPageNo = new DevExpress.XtraReports.UI.XRPageInfo();
+			this.xrLblPageNo = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+			this.xrLblPrintedBy = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLblPageHeading = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+			this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+			// 
+			// Detail
+			// 
+			this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrTable1});
+			this.Detail.HeightF = 25F;
+			this.Detail.Name = "Detail";
+			this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrTable1
+			// 
+			this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+			this.xrTable1.Name = "xrTable1";
+			this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow1});
+			this.xrTable1.SizeF = new System.Drawing.SizeF(750F, 25F);
+			// 
+			// xrTableRow1
+			// 
+			this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell2,
+            this.xrTableCell4,
+            this.xrTableCell1,
+            this.xrTableCell5});
+			this.xrTableRow1.Name = "xrTableRow1";
+			this.xrTableRow1.Weight = 11.5D;
+			// 
+			// xrTableCell2
+			// 
+			this.xrTableCell2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "AnalyzerNutrientCode")});
+			this.xrTableCell2.Name = "xrTableCell2";
+			this.xrTableCell2.Text = "xrTableCell2";
+			this.xrTableCell2.Weight = 0.76175216283553682D;
+			// 
+			// xrTableCell4
+			// 
+			this.xrTableCell4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "AnalyzerNutrientName")});
+			this.xrTableCell4.Name = "xrTableCell4";
+			this.xrTableCell4.Text = "xrTableCell4";
+			this.xrTableCell4.Weight = 1.6367524758363377D;
+			// 
+			// xrTableCell1
+			// 
+			this.xrTableCell1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "IsActive")});
+			this.xrTableCell1.Name = "xrTableCell1";
+			this.xrTableCell1.Text = "xrTableCell1";
+			this.xrTableCell1.Weight = 0.32905946389222768D;
+			// 
+			// xrTableCell5
+			// 
+			this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "UpdateStamp", "{0:M/d/yyyy hh:mm tt}")});
+			this.xrTableCell5.Name = "xrTableCell5";
+			this.xrTableCell5.Text = "xrTableCell5";
+			this.xrTableCell5.Weight = 0.60576923076923062D;
+			// 
+			// TopMargin
+			// 
+			this.TopMargin.HeightF = 50F;
+			this.TopMargin.Name = "TopMargin";
+			this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// BottomMargin
+			// 
+			this.BottomMargin.HeightF = 50F;
+			this.BottomMargin.Name = "BottomMargin";
+			this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+			this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrLblAIMPlantCode
+			// 
+			this.xrLblAIMPlantCode.LocationFloat = new DevExpress.Utils.PointFloat(0F, 67.00001F);
+			this.xrLblAIMPlantCode.Name = "xrLblAIMPlantCode";
+			this.xrLblAIMPlantCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblAIMPlantCode.SizeF = new System.Drawing.SizeF(120.8333F, 23F);
+			this.xrLblAIMPlantCode.Text = "Analyzer Nutrient Code";
+			// 
+			// xrLblAIMPlantName
+			// 
+			this.xrLblAIMPlantName.LocationFloat = new DevExpress.Utils.PointFloat(171.3943F, 67.00001F);
+			this.xrLblAIMPlantName.Name = "xrLblAIMPlantName";
+			this.xrLblAIMPlantName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblAIMPlantName.SizeF = new System.Drawing.SizeF(129.1667F, 23F);
+			this.xrLblAIMPlantName.Text = "Analyzer Nutrient Name";
+			// 
+			// xrLblAIMPlantIsActive
+			// 
+			this.xrLblAIMPlantIsActive.LocationFloat = new DevExpress.Utils.PointFloat(539.6636F, 67.00001F);
+			this.xrLblAIMPlantIsActive.Name = "xrLblAIMPlantIsActive";
+			this.xrLblAIMPlantIsActive.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblAIMPlantIsActive.SizeF = new System.Drawing.SizeF(64.16663F, 23F);
+			this.xrLblAIMPlantIsActive.Text = "Is Active";
+			// 
+			// xrLblAIMPlantUpdateStamp
+			// 
+			this.xrLblAIMPlantUpdateStamp.LocationFloat = new DevExpress.Utils.PointFloat(613.702F, 67.00001F);
+			this.xrLblAIMPlantUpdateStamp.Name = "xrLblAIMPlantUpdateStamp";
+			this.xrLblAIMPlantUpdateStamp.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblAIMPlantUpdateStamp.SizeF = new System.Drawing.SizeF(100F, 23F);
+			this.xrLblAIMPlantUpdateStamp.Text = "Update Stamp";
+			// 
+			// xrLine2
+			// 
+			this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 90.00002F);
+			this.xrLine2.Name = "xrLine2";
+			this.xrLine2.SizeF = new System.Drawing.SizeF(750F, 2.166637F);
+			// 
+			// PageHeader
+			// 
+			this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfoDate,
+            this.xrLblDate,
+            this.xrPageInfoPageNo,
+            this.xrLblPageNo,
+            this.xrPageInfo1,
+            this.xrLblPrintedBy,
+            this.xrLblPageHeading,
+            this.xrLine1,
+            this.xrLblAIMPlantCode,
+            this.xrLblAIMPlantUpdateStamp,
+            this.xrLblAIMPlantIsActive,
+            this.xrLblAIMPlantName,
+            this.xrLine2});
+			this.PageHeader.HeightF = 92.16666F;
+			this.PageHeader.Name = "PageHeader";
+			// 
+			// xrPageInfoDate
+			// 
+			this.xrPageInfoDate.Format = "{0:M/d/yy h:mm tt}";
+			this.xrPageInfoDate.LocationFloat = new DevExpress.Utils.PointFloat(502.6604F, 0F);
+			this.xrPageInfoDate.Name = "xrPageInfoDate";
+			this.xrPageInfoDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrPageInfoDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+			this.xrPageInfoDate.SizeF = new System.Drawing.SizeF(111.0416F, 23F);
+			this.xrPageInfoDate.StylePriority.UseTextAlignment = false;
+			this.xrPageInfoDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrLblDate
+			// 
+			this.xrLblDate.LocationFloat = new DevExpress.Utils.PointFloat(449.5353F, 0F);
+			this.xrLblDate.Name = "xrLblDate";
+			this.xrLblDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblDate.SizeF = new System.Drawing.SizeF(53.12506F, 23F);
+			this.xrLblDate.Text = "Date:";
+			// 
+			// xrPageInfoPageNo
+			// 
+			this.xrPageInfoPageNo.LocationFloat = new DevExpress.Utils.PointFloat(677.2436F, 0F);
+			this.xrPageInfoPageNo.Name = "xrPageInfoPageNo";
+			this.xrPageInfoPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrPageInfoPageNo.SizeF = new System.Drawing.SizeF(70.83337F, 23F);
+			this.xrPageInfoPageNo.StylePriority.UseTextAlignment = false;
+			this.xrPageInfoPageNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+			// 
+			// xrLblPageNo
+			// 
+			this.xrLblPageNo.LocationFloat = new DevExpress.Utils.PointFloat(613.7018F, 0F);
+			this.xrLblPageNo.Name = "xrLblPageNo";
+			this.xrLblPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblPageNo.SizeF = new System.Drawing.SizeF(63.54175F, 23F);
+			this.xrLblPageNo.Text = "PageNo.:";
+			// 
+			// xrPageInfo1
+			// 
+			this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(523.4937F, 22.99997F);
+			this.xrPageInfo1.Name = "xrPageInfo1";
+			this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.UserName;
+			this.xrPageInfo1.SizeF = new System.Drawing.SizeF(224.5834F, 19.79167F);
+			// 
+			// xrLblPrintedBy
+			// 
+			this.xrLblPrintedBy.LocationFloat = new DevExpress.Utils.PointFloat(449.5353F, 22.99997F);
+			this.xrLblPrintedBy.Name = "xrLblPrintedBy";
+			this.xrLblPrintedBy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblPrintedBy.SizeF = new System.Drawing.SizeF(73.95831F, 19.79167F);
+			this.xrLblPrintedBy.Text = "Printed By:";
+			// 
+			// xrLblPageHeading
+			// 
+			this.xrLblPageHeading.Font = new DevExpress.Drawing.DXFont("Arial", 21.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+			this.xrLblPageHeading.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+			this.xrLblPageHeading.Name = "xrLblPageHeading";
+			this.xrLblPageHeading.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.xrLblPageHeading.SizeF = new System.Drawing.SizeF(351.0417F, 43.83335F);
+			this.xrLblPageHeading.StylePriority.UseFont = false;
+			this.xrLblPageHeading.Text = "Analyzer Nutrient";
+			// 
+			// xrLine1
+			// 
+			this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43.83335F);
+			this.xrLine1.Name = "xrLine1";
+			this.xrLine1.SizeF = new System.Drawing.SizeF(750F, 2.166588F);
+			// 
+			// bindingSource1
+			// 
+			this.bindingSource1.DataSource = typeof(CFCAIMCore.Entity.AnalyzerNutrientInfo);
+			// 
+			// AnalyzerNutrientReport
+			// 
+			this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Detail,
+            this.TopMargin,
+            this.BottomMargin,
+            this.PageHeader});
+			this.DataSource = this.bindingSource1;
+			this.Font = new DevExpress.Drawing.DXFont("Arial Narrow", 11.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+			this.Margins = new DevExpress.Drawing.DXMargins(50, 50, 50, 50);
+			this.ShowPreviewMarginLines = false;
+			this.Version = "13.2";
+			((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPageHeading;
+        private DevExpress.XtraReports.UI.XRLine xrLine1;
+        private DevExpress.XtraReports.UI.XRLabel xrLblAIMPlantCode;
+        private DevExpress.XtraReports.UI.XRLabel xrLblAIMPlantName;
+        private DevExpress.XtraReports.UI.XRLabel xrLblAIMPlantIsActive;
+        private DevExpress.XtraReports.UI.XRLabel xrLblAIMPlantUpdateStamp;
+        private DevExpress.XtraReports.UI.XRLine xrLine2;
+        private DevExpress.XtraReports.UI.XRTable xrTable1;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfoDate;
+        private DevExpress.XtraReports.UI.XRLabel xrLblDate;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfoPageNo;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPageNo;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.XRLabel xrLblPrintedBy;
+    }
+}

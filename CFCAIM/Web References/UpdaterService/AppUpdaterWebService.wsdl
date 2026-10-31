@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cfctech.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://cfctech.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://cfctech.com/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsSubscriptionActive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsSubscriptionActiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsSubscriptionActiveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAppHasUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VersionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAppHasUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsAppHasUpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestUpdateLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AppID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestUpdateLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestUpdateLinkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsSubscriptionActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:IsSubscriptionActive" />
+  </wsdl:message>
+  <wsdl:message name="IsSubscriptionActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:IsSubscriptionActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAppHasUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAppHasUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IsAppHasUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAppHasUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestUpdateLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestUpdateLink" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestUpdateLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestUpdateLinkResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AppUpdaterWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSubscriptionActive">
+      <wsdl:input message="tns:IsSubscriptionActiveSoapIn" />
+      <wsdl:output message="tns:IsSubscriptionActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAppHasUpdate">
+      <wsdl:input message="tns:IsAppHasUpdateSoapIn" />
+      <wsdl:output message="tns:IsAppHasUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestUpdateLink">
+      <wsdl:input message="tns:GetLatestUpdateLinkSoapIn" />
+      <wsdl:output message="tns:GetLatestUpdateLinkSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AppUpdaterWebServiceSoap" type="tns:AppUpdaterWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://cfctech.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSubscriptionActive">
+      <soap:operation soapAction="http://cfctech.com/IsSubscriptionActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAppHasUpdate">
+      <soap:operation soapAction="http://cfctech.com/IsAppHasUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestUpdateLink">
+      <soap:operation soapAction="http://cfctech.com/GetLatestUpdateLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AppUpdaterWebServiceSoap12" type="tns:AppUpdaterWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://cfctech.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSubscriptionActive">
+      <soap12:operation soapAction="http://cfctech.com/IsSubscriptionActive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAppHasUpdate">
+      <soap12:operation soapAction="http://cfctech.com/IsAppHasUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestUpdateLink">
+      <soap12:operation soapAction="http://cfctech.com/GetLatestUpdateLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AppUpdaterWebService">
+    <wsdl:port name="AppUpdaterWebServiceSoap" binding="tns:AppUpdaterWebServiceSoap">
+      <soap:address location="http://webservices.cfc:8010/AppUpdaterWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AppUpdaterWebServiceSoap12" binding="tns:AppUpdaterWebServiceSoap12">
+      <soap12:address location="http://webservices.cfc:8010/AppUpdaterWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

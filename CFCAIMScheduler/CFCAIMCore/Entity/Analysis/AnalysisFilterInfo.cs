@@ -1,0 +1,123 @@
+﻿using Core.Library.AdvanceMath;
+using Core.Library.Data;
+using System;
+
+namespace CFCAIMCore.Entity
+{
+	[Serializable()]
+	public class AnalysisFilterInfo : DataObjectBase
+	{
+		public String updateExpression { get; set; }		
+		public Int32 SampleResultID { get; set; }
+		public Int32 SampleID { get; set; }
+		public Int32 SampleSize { get; set; }
+		public Int32 TrimmedSampleSize { get; set; }
+		public Int32 NumberOfSample { get; set; }
+		public Int32 ExcludedSample { get; set; }
+		public Boolean IsInclude { get; set; }
+		public Int32 CFCPlantID { get; set; }
+		public String CFCPlantCode { get; set; }
+		public String CFCPlantName { get; set; }
+		public String SamplePlant { get; set; }
+		public Int32 AIMMaterialID { get; set; }
+		public String AIMMaterialCode { get; set; }
+		public String AIMMaterialName { get; set; }
+		public Int32 AIMNutrientID { get; set; }
+		public String AIMNutrientCode { get; set; }
+		public String AIMNutrientName { get; set; }
+		public MathTypeEnum MathTypeID { get; set; }
+		public Double SampleValue { get; set; }
+		public Int32 CFCIngredientID { get; set; }
+		public String CFCIngredientCode { get; set; }
+		public String CFCIngredientName { get; set; }
+		public Int32 CFCNutrientID { get; set; }
+		public String CFCNutrientCode { get; set; }
+		public String CFCNutrientName { get; set; }
+		public Int32 AIMOwnerLocationID { get; set; }
+		public String OwnerCode { get; set; }
+		public String LocationCode { get; set; }
+		public Int32 SupplierID { get; set; }
+		public String SupplierName { get; set; }
+		public String SupplierLocationName { get; set; }
+		public String LocationName { get; set; }
+		public Int32 AIMLocationID { get; set; }
+		public String Unit { get; set; }
+		public Double CurrentNutrientVal { get; set; }
+		public Int32 SampleAIMID { get; set; }
+		public Double Difference { get; set; }
+		public Double DiffVal { get; set; }
+		public Double ProposedNutrientValue { get; set; }		
+		private String Custom1Expresstion { get; set; }				
+		private String Custom2Expresstion { get; set; }				
+		private String Custom3Expresstion { get; set; }				
+		private String Custom4Expresstion { get; set; }				
+		private String Custom5Expresstion { get; set; }				
+		private String Custom6Expresstion { get; set; }				
+		private String Custom7Expresstion { get; set; }				
+		private String Custom8Expresstion { get; set; }				
+		private String Custom9Expresstion { get; set; }				
+		private String Custom10Expresstion { get; set; }				
+		public Boolean Active { get; set; }
+		public DateTime SampleDate { get; set; }
+		public Boolean IsUntrimmedValidOutlier { get; set; }
+		public Boolean IsTrimmedValidOutlier { get; set; }
+		public Double UntrimmedFirstQuartile { get; set; }
+		public Double UntrimmedThirdQuartile { get; set; }
+		public Double UntrimmedMean { get; set; }
+		public Double UntrimmedStandardDeviation { get; set; }
+		public Double UntrimmedDetailMin { get; set; }
+		public Double UntrimmedDetailMax { get; set; }
+		public Double UntrimmedDetailSQRT { get; set; }
+		public Double LMin { get; set; }
+		public Double LMax { get; set; }
+		public Double UMin { get; set; }
+		public Double UMax { get; set; }
+		public Double UntrimmedUpper95Mean { get; set; }		
+		public Double UntrimmedLower95Mean { get; set; }		
+		public Double UntrimmedUpper90Mean { get; set; }		
+		public Double UntrimmedLower90Mean { get; set; }		
+		public Double UntrimmedMeanPlusHalfStandardDeviation { get; set; }		
+		public Double UntrimmedMeanMinusHalfStandardDeviation { get; set; }		
+		public Double UntrimmedMeanPlusOneStandardDeviation { get; set; }		
+		public Double UntrimmedMeanMinusOneStandardDeviation { get; set; }		
+		public Double UntrimmedOutlierLowerMild { get; set; }		
+		public Double UntrimmedOutlierLowerExtreme { get; set; }		
+		public Double UntrimmedOutlierUpperMild { get; set; }		
+		public Double UntrimmedOutlierUpperExtreme { get; set; }		
+		public Int32 CFCUserID { get; set; }
+		public String UserName { get; set; }
+		public Int32 OwnerID { get; set; }
+		public Int32 OwnerLocationID { get; set; }
+		public Int32 WarningGlobalH { get; set; }
+		public Int32 WarningMinMaxLimit { get; set; }
+		public String SampleCode { get; set; }
+		public Double TrimmedFirstQuartile { get; set; }
+		public Double TrimmedThirdQuartile { get; set; }
+		public Double TrimmedMean { get; set; }
+		public Double TrimmedStandardDeviation { get; set; }
+		public Double TrimmedDetailMin { get; set; }
+		public Double TrimmedDetailMax { get; set; }
+		public Double TrimmedDetailSQRT { get; set; }
+		public Double TrimmedUpper95Mean { get; set; }		
+		public Double TrimmedLower95Mean { get; set; }
+		public Double TrimmedUpper90Mean { get; set; }
+		public Double TrimmedLower90Mean { get; set; }
+		public Double TrimmedMeanPlusHalfStandardDeviation { get; set; }
+		public Double TrimmedMeanMinusHalfStandardDeviation { get; set; }
+		public Double TrimmedMeanPlusOneStandardDeviation { get; set; }
+		public Double TrimmedMeanMinusOneStandardDeviation { get; set; }
+		public Double TrimmedOutlierLowerMild { get; set; }
+		public Double TrimmedOutlierLowerExtreme { get; set; }
+		public Double TrimmedOutlierUpperMild { get; set; }
+		public Double TrimmedOutlierUpperExtreme { get; set; }
+		public Double SafetyMargin { get; set; }
+		public Boolean IsOverlay { get; set; }
+		public String AIMSupplierCode { get; set; }
+		public String AIMSupplierLocationCode { get; set; }
+		public String DataSourceTypeName { get; set; }
+		public Int32 DataSourceTypeID { get; set; }
+		public Int32 TotalSampleSize { get; set; }
+		public Int32 SupplierOwnerOption { get; set; }
+		//public Boolean IsFiltered { get; set; }
+	}
+}

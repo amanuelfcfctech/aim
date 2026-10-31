@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9E6C3FD-709B-4B13-A867-0658739D6E1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CFCLicensing</RootNamespace>
+    <AssemblyName>CFCLicensing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Core.Library">
+      <HintPath>..\..\SharedBinaries\CFC Tech\CFCCore\DevExpress24.1\Core.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\SharedBinaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\SharedBinaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\SharedBinaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\SharedBinaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\..\SharedBinaries\Microsoft\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <HintPath>..\..\SharedBinaries\Microsoft\ReportViewer\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\SharedBinaries\Microsoft\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizationCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizationCode.Designer.cs">
+      <DependentUpon>AuthorizationCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ConfigInfo.cs" />
+    <Compile Include="Entity\VersionInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="LicensingChecker.cs" />
+    <Compile Include="Data\Common\LicensingDataAccess.cs" />
+    <Compile Include="Entity\Enums.cs" />
+    <Compile Include="EvaluationNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluationNotice.Designer.cs">
+      <DependentUpon>EvaluationNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluationPeriodExpired.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluationPeriodExpired.Designer.cs">
+      <DependentUpon>EvaluationPeriodExpired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseAgreement.Designer.cs">
+      <DependentUpon>LicenseAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LicensingManager.cs" />
+    <Compile Include="Objects\Activation.cs" />
+    <Compile Include="Objects\Enums.cs" />
+    <Compile Include="OrderInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderInformation.Designer.cs">
+      <DependentUpon>OrderInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AuthorizationCode.resx">
+      <DependentUpon>AuthorizationCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluationNotice.resx">
+      <DependentUpon>EvaluationNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluationPeriodExpired.resx">
+      <DependentUpon>EvaluationPeriodExpired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseAgreement.resx">
+      <DependentUpon>LicenseAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderInformation.resx">
+      <DependentUpon>OrderInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LicenseAgreement.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonImages\DeleteBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonImages\check mark.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonImages\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonImages\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonImages\exit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

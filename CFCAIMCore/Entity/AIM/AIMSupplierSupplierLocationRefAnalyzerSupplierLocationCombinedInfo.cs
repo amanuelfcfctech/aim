@@ -1,0 +1,63 @@
+﻿using System;
+using System.Data;
+using Core.Library.Data;
+
+namespace CFCAIMCore.Entity
+{
+	[Serializable()]
+	public class AIMSupplierSupplierLocationRefAnalyzerSupplierLocationCombinedInfo : DataObjectBase
+	{
+		#region Properties
+
+		[DataReaderColumnMapping(),
+		SqlParameterMapping("@AIMSupplierSupplierLocationRefAnalyzerSupplierLocationCombinedID", SqlDbType.Int)]
+		public Int32 AIMSupplierSupplierLocationRefAnalyzerSupplierLocationCombinedID { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true),
+		SqlParameterMapping("@AIMSupplierLocationID", SqlDbType.Int)]
+		public Int32 AIMSupplierLocationID { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true),
+		SqlParameterMapping("@AIMSupplierID", SqlDbType.Int)]
+		public Int32 AIMSupplierID { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String AIMSupplierCode { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String AIMSupplierName { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String AIMSupplierLocationCode { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String AIMSupplierLocationName { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true),
+		SqlParameterMapping("@AnalyzerSupplierLocationCombinedID", SqlDbType.Int)]
+		public Int32 AnalyzerSupplierLocationCombinedID { get; set; }			
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String AnalyzerSupplierLocationCombinedName { get; set; }
+				
+		[DataReaderColumnMapping(isOptional: true)]
+		public DateTime UpdateStamp { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true),
+		SqlParameterMapping("@CFCUserID", SqlDbType.Int)]
+		public Int32 CFCUserID { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String UserName { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true)]
+		public String DataSourceTypeName { get; set; }
+
+		[DataReaderColumnMapping(isOptional: true),
+		SqlParameterMapping("@DataSourceTypeID", SqlDbType.Int)]
+		public Int32 DataSourceTypeID { get; set; }
+
+
+		#endregion
+	}
+}

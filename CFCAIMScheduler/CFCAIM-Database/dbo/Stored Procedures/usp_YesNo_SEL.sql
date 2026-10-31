@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[usp_YesNo_SEL]
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SELECT 
+	YesNoID
+	, YesNoString
+	
+FROM 
+	dbo.YesNo WITH(NOLOCK)
+
+END

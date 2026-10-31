@@ -1,0 +1,211 @@
+﻿using System;
+using System.Collections;
+
+namespace CFCAIM.ReportDevExpress
+{
+	public partial class AnalysisPivotReportSummary : DevExpress.XtraReports.UI.XtraReport
+	{
+		CFCUser.Global userGlobal = new CFCUser.Global();
+		static ArrayList medianList = new ArrayList();
+		Int32 medianRow = 0;
+		Int32 medianColumn = 0;
+		Int32 lastRowIndex = 0;
+		Boolean isGroup = true;
+
+		public AnalysisPivotReportSummary()
+		{
+			InitializeComponent();
+
+			//4/28/21
+			if (AIMGlobal.sortNutrientsBy == "Code")
+			{
+				pivotGridField15.Visible = true;
+				pivotGridField15.AreaIndex = 0;         //nutrient code
+				pivotGridField4.AreaIndex = 1;          //nutrient name
+				pivotGridField9.AreaIndex = 2;          //unit size	
+			}
+		}
+
+		private void xrPivotGrid1_CustomCellValue(Object sender, DevExpress.XtraReports.UI.PivotGrid.PivotCellValueEventArgs e)
+		{
+			Double value = 0;
+
+			if (e.RowField != null)
+			{
+				if (e.RowField.ToString() == "Material")
+				{
+					if (isGroup == true)
+					{
+						isGroup = false;
+						medianRow = 0;
+						ArrayList medianList = new ArrayList();
+						lastRowIndex = 0;
+					}
+
+					if (e.Value != null)
+					{
+						Double.TryParse(e.Value.ToString(), out value);
+					}
+
+					if (e.RowIndex == 0)
+					{
+						medianColumn += 1;
+						medianList.Add(value);
+
+						if (medianColumn == ((DevExpress.XtraReports.UI.XRPivotGrid)(sender)).ColumnCount)
+						{
+							if (((DevExpress.XtraReports.UI.XRPivotGrid)(sender)).RowCount == 1)
+							{
+								//kick off group totals
+							}
+						}
+					}
+
+					else
+					{
+						if (e.RowIndex != lastRowIndex)
+						{
+							medianRow += 1;
+							lastRowIndex = e.RowIndex;
+						}
+						medianList.Add(value);
+					}
+
+				}
+			}
+		}
+
+		private Double GetMedianValues(Int32 column)
+		{
+			// Returns a list of summary values against which a Custom Total will be calculated.
+			Double value = 0;
+			Int32 columnCount = 0;
+			ArrayList values = new ArrayList();
+
+			// Iterates through summary data source records and copies summary values to an array.
+			if (medianList.Count == 0)
+			{
+				return value;
+			}
+
+			else if (medianList.Count <= medianColumn)
+			{
+				Double.TryParse(medianList[column].ToString(), out value);
+				return value;
+			}
+			else
+			{
+				columnCount = column;
+				for (int row = 0; row <= medianRow; row++)
+				{
+					Double.TryParse(medianList[columnCount].ToString(), out value);
+					values.Add(value);
+					columnCount += medianColumn;
+				}
+				// Sorts summary values.
+				values.Sort();
+
+				// Returns the summary values array.
+				return GetMedian(values);
+			}
+		}
+
+		private Double GetMedian(ArrayList values)
+		{
+			Int32 count = 0;
+			if (values == null)
+			{
+				return 0;
+			}
+			else
+			{
+				if ((values.Count % 2) == 0)
+				{
+					count = values.Count / 2;
+					return ((Double)(values[count - 1]) +
+						(Double)(values[count])) / 2;
+				}
+				else
+				{
+					return (Double)values[values.Count / 2];
+				}
+			}
+		}
+
+		private void xrPivotGrid1_BeforePrint(Object sender, System.Drawing.Printing.PrintEventArgs e)
+		{				
+
+			medianList.Clear();
+
+			
+		}
+
+		private void xrPivotGrid1_FieldValueDisplayText(Object sender, DevExpress.XtraReports.UI.PivotGrid.PivotFieldDisplayTextEventArgs e)
+		{
+			if (e.ValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal)
+				if (e.DisplayText == "Grand Total")
+				{
+					e.DisplayText = "Grand Totals";
+				}
+		}
+
+		private void xrPivotGrid1_CustomRowHeight(Object sender, DevExpress.XtraReports.UI.PivotGrid.PivotCustomRowHeightEventArgs e)
+		{
+			if (e.ValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal)
+			{
+				e.RowHeight = 25;
+			}
+		}
+		private const float CompareIsZeroTolerance = 0.000000000001f;
+		private static double CoefficientOfVariance(double sd, double mean)
+		{
+			if (Math.Abs(mean - 0) < CompareIsZeroTolerance) return 0;
+			return (sd / mean) * 100;
+		}
+
+		private void xrPivotGrid1_CustomCellDisplayText(Object sender, DevExpress.XtraReports.UI.PivotGrid.PivotCellDisplayTextEventArgs e)
+		{
+			
+			//if (e.DataField.Caption == "CV %" && e.RowValueType == DevExpress.XtraPivotGrid.PivotGridValueType.Total)
+			if (e.DataField.Caption == "CV %")
+				{
+				double stDev = Convert.ToDouble(e.GetCellValue(xrPivotGridField5));
+				double mean = Convert.ToDouble(e.GetCellValue(xrPivotGridField3));
+				double cv = CoefficientOfVariance(stDev, mean);
+				e.DisplayText = string.Format("{0:f2}", cv);
+
+			}
+
+			//if (e.DataField.Caption == "Median" && e.RowValueType == DevExpress.XtraPivotGrid.PivotGridValueType.Total)
+			if (e.DataField.Caption == "Median" )
+				{
+				e.DisplayText = GetMedianValues(e.ColumnIndex).ToString();
+				isGroup = true;
+			}
+		}
+
+		private void AnalysisPivotReportSummary_BeforePrint(Object sender, System.Drawing.Printing.PrintEventArgs e)
+		{
+			//Populate report header text fields
+			xrDryMatter.Text = AIMGlobal.dryMatterText;
+			txtMaterial.Text = AIMGlobal.analyzerMaterialName;
+
+			//9/10/20 - change to use AIMCoreGlobal
+			//txtCompany.Text = AIMGlobal.CompanyName();
+			txtCompany.Text = CFCAIMCore.Global.CompanyName();
+
+            xrDateFrom.Text = AIMGlobal.fromDate;
+			xrDateTo.Text = AIMGlobal.toDate;
+			if (AIMGlobal.showDate == false)
+			{
+				xrDateFrom.Visible = false;
+				xrDateTo.Visible = false;
+			}
+
+			//NutrientName - make sure column is wide enough
+			//xrPivotGrid1.BestFit(pivotGridField4);				
+		}
+
+		
+	}
+}

@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE [CFCUser].[usp_UserMenuAccess_DEL_CFCUserID]
+	  @CFCUserID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DELETE
+	dbo.UserMenuAccess WITH (ROWLOCK)
+WHERE 
+	CFCUserID = @CFCUserID
+END

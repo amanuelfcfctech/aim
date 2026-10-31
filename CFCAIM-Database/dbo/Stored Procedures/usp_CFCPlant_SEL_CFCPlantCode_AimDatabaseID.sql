@@ -1,0 +1,34 @@
+﻿CREATE PROCEDURE [dbo].[usp_CFCPlant_SEL_CFCPlantCode_AimDatabaseID]
+	@CFCPlantCode		VARCHAR(10)
+	, @AimDatabaseID	INT
+
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SELECT
+	  CP.CFCPlantID
+	, CP.CFCPlantCode
+	, CP.CFCPlantName
+	, CP.IsActive
+	, CP.UpdateStamp
+
+	-- 1/11/21 - changed to remove aspnet_User table (and use CFCUser instead)
+	--, AU.UserName
+	, U.UserName
+
+FROM 
+	dbo.CFCPlant CP WITH(NOLOCK)
+	LEFT OUTER JOIN
+		CFCUser.CFCUser U WITH(NOLOCK)
+			ON CP.CFCUserID = U.CFCUserID
+
+		-- 1/11/21 - changed to remove aspnet_User table (and use CFCUser instead)
+		--LEFT OUTER JOIN
+		--	dbo.aspnet_Users AU WITH(NOLOCK)
+		--		ON AU.UserId = U.UserID
+
+WHERE
+	CP.CFCPlantCode = @CFCPlantCode AND 
+	CP.AIMDatabaseID = @AimDatabaseID
+END

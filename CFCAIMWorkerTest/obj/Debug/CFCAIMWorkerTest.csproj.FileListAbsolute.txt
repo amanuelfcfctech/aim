@@ -1,0 +1,4 @@
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIMWorkerTest\obj\Debug\CFCAIMWorkerTest.csproj.AssemblyReference.cache
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIMWorkerTest\obj\Debug\CFCAIMWorkerTest.UnitTest.resources
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIMWorkerTest\obj\Debug\CFCAIMWorkerTest.csproj.GenerateResource.cache
+E:\CFCTechAmanuelF\Development\SourceAppAIM\CFCAIMWorkerTest\obj\Debug\CFCAIMWorkerTest.csproj.CoreCompileInputs.cache

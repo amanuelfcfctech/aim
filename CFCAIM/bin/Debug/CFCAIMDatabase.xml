@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--CFCDatabase-->
+<CFCDatabases>
+  <CFCDatabase>
+    <ConnectName>Butterball</ConnectName>
+    <Server>server2019db\SQL2022</Server>
+    <Database>CFCAIMButterball</Database>
+    <IsSQLAuthentication>True</IsSQLAuthentication>
+    <IsDefaultConnection>False</IsDefaultConnection>
+    <User>sa</User>
+    <Password>S8WCrEWlbR20rnm1hCAFEQ==</Password>
+    <ConnectionType>1</ConnectionType>
+    <ProductionOrNon>N</ProductionOrNon>
+  </CFCDatabase>
+  <CFCDatabase>
+    <ConnectName>SmithField</ConnectName>
+    <Server>server2019db\SQL2019</Server>
+    <Database>CFCAIMSmithfield260629</Database>
+    <IsSQLAuthentication>True</IsSQLAuthentication>
+    <IsDefaultConnection>True</IsDefaultConnection>
+    <User>SA</User>
+    <Password>DHntNnnuOqvwMhrrTiJSSw==</Password>
+    <ConnectionType>1</ConnectionType>
+    <ProductionOrNon>N</ProductionOrNon>
+  </CFCDatabase>
+</CFCDatabases>

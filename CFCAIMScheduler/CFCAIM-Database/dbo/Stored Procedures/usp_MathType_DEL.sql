@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[usp_MathType_DEL]
+				@MathTypeID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DELETE
+FROM 
+	dbo.MathType WITH(ROWLOCK)
+WHERE
+	MathTypeID = @MathTypeID
+
+END

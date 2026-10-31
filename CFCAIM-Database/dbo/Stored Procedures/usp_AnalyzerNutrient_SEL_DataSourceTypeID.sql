@@ -1,0 +1,27 @@
+﻿CREATE PROCEDURE [dbo].[usp_AnalyzerNutrient_SEL_DataSourceTypeID]
+		@DataSourceTypeID	INT
+		
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SELECT
+	  NN.*
+	, NN.UpdateStamp
+
+	-- 1/11/21 - changed to remove aspnet_User table (and use CFCUser instead)
+	--, AU.UserName
+	, U.UserName
+FROM 
+	dbo.AnalyzerNutrient NN WITH(NOLOCK)
+	LEFT OUTER JOIN
+		CFCUser.CFCUser U WITH(NOLOCK)
+			ON NN.CFCUserID = U.CFCUserID
+
+		-- 1/11/21 - changed to remove aspnet_User table (and use CFCUser instead)
+		--LEFT OUTER JOIN
+		--	dbo.aspnet_Users AU WITH(NOLOCK)
+		--		ON AU.UserId = U.UserID
+WHERE 
+	NN.DataSourceTypeID = @DataSourceTypeID 
+END

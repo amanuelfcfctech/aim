@@ -1,0 +1,260 @@
+﻿namespace CFCAIM.ReportDevExpress
+{
+    partial class SampleLabelReportOneInch
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabelCaption1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelField3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelCaption3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelField2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.dbSampleDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelField1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelCaption2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.bcSampleID = new DevExpress.XtraReports.UI.XRBarCode();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.formattingRule1 = new DevExpress.XtraReports.UI.FormattingRule();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabelCaption1,
+            this.xrLabelField3,
+            this.xrLabelCaption3,
+            this.xrLabel2,
+            this.xrLabelField2,
+            this.dbSampleDate,
+            this.xrLabelField1,
+            this.xrLabelCaption2,
+            this.bcSampleID});
+            this.Detail.HeightF = 79.37495F;
+            this.Detail.Name = "Detail";
+            this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabelCaption1
+            // 
+            this.xrLabelCaption1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabelCaption1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Line1Caption")});
+            this.xrLabelCaption1.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabelCaption1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 31.5F);
+            this.xrLabelCaption1.Name = "xrLabelCaption1";
+            this.xrLabelCaption1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelCaption1.SizeF = new System.Drawing.SizeF(110F, 15F);
+            this.xrLabelCaption1.StylePriority.UseBorders = false;
+            this.xrLabelCaption1.StylePriority.UseFont = false;
+            // 
+            // xrLabelField3
+            // 
+            this.xrLabelField3.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabelField3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Line3Data")});
+            this.xrLabelField3.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabelField3.LocationFloat = new DevExpress.Utils.PointFloat(112F, 61.5F);
+            this.xrLabelField3.Name = "xrLabelField3";
+            this.xrLabelField3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelField3.SizeF = new System.Drawing.SizeF(167F, 15F);
+            this.xrLabelField3.StylePriority.UseBorders = false;
+            this.xrLabelField3.StylePriority.UseFont = false;
+            // 
+            // xrLabelCaption3
+            // 
+            this.xrLabelCaption3.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabelCaption3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Line3Caption")});
+            this.xrLabelCaption3.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabelCaption3.LocationFloat = new DevExpress.Utils.PointFloat(1.589457E-05F, 61.5F);
+            this.xrLabelCaption3.Name = "xrLabelCaption3";
+            this.xrLabelCaption3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelCaption3.SizeF = new System.Drawing.SizeF(110F, 15F);
+            this.xrLabelCaption3.StylePriority.UseBorders = false;
+            this.xrLabelCaption3.StylePriority.UseFont = false;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(100F, 23F);
+            // 
+            // xrLabelField2
+            // 
+            this.xrLabelField2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabelField2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Line2Data")});
+            this.xrLabelField2.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabelField2.LocationFloat = new DevExpress.Utils.PointFloat(112F, 46.5F);
+            this.xrLabelField2.Name = "xrLabelField2";
+            this.xrLabelField2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelField2.SizeF = new System.Drawing.SizeF(167F, 15F);
+            this.xrLabelField2.StylePriority.UseBorders = false;
+            this.xrLabelField2.StylePriority.UseFont = false;
+            // 
+            // dbSampleDate
+            // 
+            this.dbSampleDate.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.dbSampleDate.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "SampleDate", "{0:MM/dd/yyyy}")});
+            this.dbSampleDate.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.dbSampleDate.LocationFloat = new DevExpress.Utils.PointFloat(210.8334F, 2.499962F);
+            this.dbSampleDate.Name = "dbSampleDate";
+            this.dbSampleDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.dbSampleDate.SizeF = new System.Drawing.SizeF(69.16658F, 20.50002F);
+            this.dbSampleDate.StylePriority.UseBorders = false;
+            this.dbSampleDate.StylePriority.UseFont = false;
+            this.dbSampleDate.Text = "dbSampleDate";
+            // 
+            // xrLabelField1
+            // 
+            this.xrLabelField1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabelField1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Line1Data")});
+            this.xrLabelField1.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabelField1.LocationFloat = new DevExpress.Utils.PointFloat(112F, 30.5F);
+            this.xrLabelField1.Name = "xrLabelField1";
+            this.xrLabelField1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelField1.SizeF = new System.Drawing.SizeF(167F, 15F);
+            this.xrLabelField1.StylePriority.UseBorders = false;
+            this.xrLabelField1.StylePriority.UseFont = false;
+            this.xrLabelField1.Text = "xrLabelField1";
+            // 
+            // xrLabelCaption2
+            // 
+            this.xrLabelCaption2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabelCaption2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Line2Caption")});
+            this.xrLabelCaption2.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabelCaption2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.5F);
+            this.xrLabelCaption2.Name = "xrLabelCaption2";
+            this.xrLabelCaption2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelCaption2.SizeF = new System.Drawing.SizeF(110F, 15F);
+            this.xrLabelCaption2.StylePriority.UseBorders = false;
+            this.xrLabelCaption2.StylePriority.UseFont = false;
+            // 
+            // bcSampleID
+            // 
+            this.bcSampleID.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.bcSampleID.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "SampleID")});
+            this.bcSampleID.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.bcSampleID.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.bcSampleID.Name = "bcSampleID";
+            this.bcSampleID.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
+            this.bcSampleID.SizeF = new System.Drawing.SizeF(280F, 30.5F);
+            this.bcSampleID.StylePriority.UseBorders = false;
+            this.bcSampleID.StylePriority.UseFont = false;
+            this.bcSampleID.Symbology = code128Generator1;
+            // 
+            // TopMargin
+            // 
+            this.TopMargin.HeightF = 10F;
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.HeightF = 6.875149F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // formattingRule1
+            // 
+            this.formattingRule1.Name = "formattingRule1";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(CFCAIMCore.Entity.SampleLabelInfo);
+            // 
+            // objectDataSource1
+            // 
+            this.objectDataSource1.DataSource = typeof(CFCAIMCore.Entity.SampleLabelFormatInfo);
+            this.objectDataSource1.Name = "objectDataSource1";
+            // 
+            // SampleLabelReportOneInch
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Detail,
+            this.TopMargin,
+            this.BottomMargin});
+            this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
+            this.bindingSource1,
+            this.objectDataSource1});
+            this.DataSource = this.objectDataSource1;
+            this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {
+            this.formattingRule1});
+            this.Margins = new DevExpress.Drawing.DXMargins(10F, 10F, 10F, 6.875149F);
+            this.PageHeight = 100;
+            this.PageWidth = 300;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
+            this.ShowPreviewMarginLines = false;
+            this.Version = "24.1";
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.SampleLabelReport_BeforePrint);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.XRBarCode bcSampleID;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DevExpress.XtraReports.UI.XRLabel dbSampleDate;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelField1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelCaption2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelField2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelCaption3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelField3;
+		private DevExpress.XtraReports.UI.XRLabel xrLabelCaption1;
+        private DevExpress.XtraReports.UI.FormattingRule formattingRule1;
+        private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource1;
+    }
+}

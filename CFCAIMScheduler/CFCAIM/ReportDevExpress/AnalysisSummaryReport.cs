@@ -1,0 +1,35 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+
+namespace CFCAIM.ReportDevExpress
+{
+    public partial class AnalysisSummaryReport : DevExpress.XtraReports.UI.XtraReport
+    {
+        public AnalysisSummaryReport()
+        {
+            InitializeComponent();
+        }
+
+		private void AnalysisSummaryReport_BeforePrint(object sender, CancelEventArgs e)
+		{
+            //4/20/21
+            if (AIMGlobal.sortNutrientsBy == "Code")
+            {
+                Detail.SortFields.Add(new GroupField("SortNutrientCode", XRColumnSortOrder.Ascending));
+            }
+            else
+            {
+                Detail.SortFields.Add(new GroupField("NutrientName", XRColumnSortOrder.Ascending));
+            }
+            
+
+            //9/10/20 - change to use AIMCoreGlobal
+            //txtCompany.Text = AIMGlobal.CompanyName();
+            txtCompany.Text = CFCAIMCore.Global.CompanyName();
+        }
+
+    }
+}

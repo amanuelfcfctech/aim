@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CFCSetting>
+  <Setting>
+    <SettingID>0</SettingID>
+    <IsDebug>True</IsDebug>
+    <IsTestUrl>False</IsTestUrl>
+    <APIUrl>http://api.cfctech.com</APIUrl>
+    <APIUrlTest>http://localhost:44390/</APIUrlTest>
+    <AIMAPIKey>944D59194C9544B7BE8C9C7165EC8ACD</AIMAPIKey>
+    <AIMInstrumentKey>DC47C0AABD5544F380AC3C1E2757FE81</AIMInstrumentKey>
+    <FossCSVPath />
+    <FossNIRPath />
+    <FossArchivePath />
+    <FossErrorPath />
+    <IsPNETestUrl>False</IsPNETestUrl>
+    <PNEAPIUrl>https://pne.adisseo.com/api</PNEAPIUrl>
+    <PNEAPITestUrl>https://pne-preprod.adisseo.com/api</PNEAPITestUrl>
+    <IsMaintenanceTestUrl>False</IsMaintenanceTestUrl>
+    <APIMaintenanceUrl>http://apimaintenance.cfctech.com</APIMaintenanceUrl>
+    <APIMaintenanceUrlTest>http://localhost:55674/</APIMaintenanceUrlTest>
+  </Setting>
+</CFCSetting>

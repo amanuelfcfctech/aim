@@ -1,0 +1,14 @@
+﻿
+CREATE PROCEDURE [CFCUser].[usp_UserAccess_DEL_CFCUserID]
+	  @CFCUserID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DELETE
+	dbo.UserAccess WITH (ROWLOCK)
+WHERE 
+	CFCUserID = @CFCUserID
+END
+
+PRINT N'Update complete.';

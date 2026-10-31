@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[usp_PrinterUserDefault_DEL_CFCUserID]
+				@CFCUserID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DELETE
+FROM 
+	dbo.PrinterUserDefault WITH(ROWLOCK)
+WHERE
+	CFCUserID = @CFCUserID
+
+END

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--CFCDatabase-->
+<CFCDatabases>
+  <CFCDatabase>
+    <ConnectName>AIM</ConnectName>
+    <Server>SERVER2019DB\SQL2022</Server>
+    <Database>CFCAIMButterball</Database>
+    <IsSQLAuthentication>True</IsSQLAuthentication>
+    <IsDefaultConnection>True</IsDefaultConnection>
+    <User>SA</User>
+    <Password>S8WCrEWlbR20rnm1hCAFEQ==</Password>
+    <ConnectionType>1</ConnectionType>
+    <ProductionOrNon>N</ProductionOrNon>
+  </CFCDatabase>
+</CFCDatabases>

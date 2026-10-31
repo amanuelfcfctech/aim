@@ -1,0 +1,30 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+
+namespace CFCAIM.ReportDevExpress
+{
+	public partial class OrphansAimNutrientRefAnalyzerNutrient : DevExpress.XtraReports.UI.XtraReport
+	{
+		public OrphansAimNutrientRefAnalyzerNutrient()
+		{
+			InitializeComponent();
+		}
+
+        private void OrphansAimNutrientRefAnalyzerNutrient_BeforePrint(object sender, CancelEventArgs e)
+        {
+            //---------------------------------------
+            //4/20/21
+            if (AIMGlobal.sortNutrientsBy == "Code")
+            {
+                Detail.SortFields.Add(new GroupField("SortNutrientCode", XRColumnSortOrder.Ascending));
+            }
+            else
+            {
+                Detail.SortFields.Add(new GroupField("NutrientName", XRColumnSortOrder.Ascending));
+            }
+        }
+    }
+}

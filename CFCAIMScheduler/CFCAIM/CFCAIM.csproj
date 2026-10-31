@@ -1,0 +1,2484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34E8C4B8-A4E5-4266-A849-08FFC1669730}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CFCAIM</RootNamespace>
+    <AssemblyName>CFCAIM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>E:\CFCTech\CFC Software Installed On Server\CFC Aim test\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://cfctech.blob.core.windows.net/aimclickonce/</InstallUrl>
+    <ProductName>CFC AIMS</ProductName>
+    <PublisherName>CFC Tech Services</PublisherName>
+    <MinimumRequiredVersion>14.8.14.3</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.17.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1424C1111DDA90B8E68DF613EC6F5981853946E8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CFCAIM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CFCAIM.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>CFCAIM.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CFCAIMCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CFCAIMCore\bin\Debug\CFCAIMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="CFCAIMCustom, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CFCAIMCustom.dll</HintPath>
+    </Reference>
+    <Reference Include="CFCFormsControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CFCFormsControlLibrary\bin\Debug\CFCFormsControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CFCLicensing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CFCLicensing\bin\Debug\CFCLicensing.dll</HintPath>
+    </Reference>
+    <Reference Include="CFCUser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CFCUser\bin\Debug\CFCUser.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Library, Version=1.1.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SharedBinaries\CFC Tech\CFCCore\DevExpress24.1\Core.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=28.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SharedBinaries\CsvHelper.28.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v24.1.Export, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataVisualization.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PdfViewer.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v24.1.Wizard, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>..\..\SharedBinaries\Microsoft\Office14\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\Microsoft\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\Shared Binaries\DotNetZip\v1.9\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.0.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\SharedBinaries\Microsoft\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SharedBinaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\Shared Binaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Shared Binaries\Microsoft\EnterpriseLibrary\5.0.414.0\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo">
+      <HintPath>..\..\Shared Binaries\Microsoft\SQLServer\120\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc">
+      <HintPath>..\..\Shared Binaries\Microsoft\SQLServer\120\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo">
+      <HintPath>..\..\Shared Binaries\Microsoft\SQLServer\120\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended">
+      <HintPath>..\..\Shared Binaries\Microsoft\SQLServer\120\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.1.2\lib\nunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.1.2\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\packages\NUnitTestAdapter.1.2\lib\nunit.util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>..\packages\NUnitTestAdapter.1.2\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="office">
+      <HintPath>..\..\SharedBinaries\Microsoft\Office14\office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\..\CFCTech\Development\Shared Binaries\RestSharp\105.0.1 Net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisProductHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisProductHelp.Designer.cs">
+      <DependentUpon>AnalysisProductHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisProductSampleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisProductSampleDetail.Designer.cs">
+      <DependentUpon>AnalysisProductSampleDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisProductToleranceHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisProductToleranceHelp.Designer.cs">
+      <DependentUpon>AnalysisProductToleranceHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cloud\FurtherAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cloud\FurtherAnalysis.Designer.cs">
+      <DependentUpon>FurtherAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cloud\PendingSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cloud\PendingSample.Designer.cs">
+      <DependentUpon>PendingSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cloud\PNECredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cloud\PNECredit.Designer.cs">
+      <DependentUpon>PNECredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyName.Designer.cs">
+      <DependentUpon>CompanyName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroundUnGroundCrossReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroundUnGroundCrossReference.Designer.cs">
+      <DependentUpon>GroundUnGroundCrossReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IconList.Designer.cs">
+      <DependentUpon>IconList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconListResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IconListResources.Designer.cs">
+      <DependentUpon>IconListResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\AIMSupplierLocationGroupHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\AIMSupplierLocationGroupHelp.Designer.cs">
+      <DependentUpon>AIMSupplierLocationGroupHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTolerance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductTolerance.Designer.cs">
+      <DependentUpon>ProductTolerance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NutrientTolerance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NutrientTolerance.Designer.cs">
+      <DependentUpon>NutrientTolerance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisProduct.Designer.cs">
+      <DependentUpon>AnalysisProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisSharedFunctions.cs" />
+    <Compile Include="Report\ReportDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDesigner.Designer.cs" />
+    <Compile Include="Report\Report_Designer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Designer.Designer.cs">
+      <DependentUpon>Report_Designer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Test8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Test8.Designer.cs">
+      <DependentUpon>Test8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Test5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Test5.Designer.cs">
+      <DependentUpon>Test5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Globals\Global.cs" />
+    <Compile Include="Custom\Vitapro\Data\CustomDataAccess.cs" />
+    <Compile Include="Custom\Vitapro\Entity\Enums.cs" />
+    <Compile Include="Custom\Vitapro\Entity\ExportInfo.cs" />
+    <Compile Include="Custom\Vitapro\Entity\LineRefCFCPlantInfo.cs" />
+    <Compile Include="Custom\Vitapro\Entity\LotInfo.cs" />
+    <Compile Include="Custom\Vitapro\Entity\ProductionStatusInfo.cs" />
+    <Compile Include="Custom\Vitapro\Entity\SampleDetailInfo.cs" />
+    <Compile Include="Custom\Vitapro\Entity\SystemSettingsCustomInfo.cs" />
+    <Compile Include="Custom\Vitapro\Forms\Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\Export.Designer.cs">
+      <DependentUpon>Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\LineMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\LineMaintenance.Designer.cs">
+      <DependentUpon>LineMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\SampleProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\SampleProduction.Designer.cs">
+      <DependentUpon>SampleProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\SampleReceiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\SampleReceiving.Designer.cs">
+      <DependentUpon>SampleReceiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\SettingsCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Forms\SettingsCustom.Designer.cs">
+      <DependentUpon>SettingsCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Vitapro\Manager\CustomManager.cs" />
+    <Compile Include="Custom\Vitapro\ReportDevExpress\ExportBatchDetail_Spanish.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom\Vitapro\ReportDevExpress\ExportBatchDetail_Spanish.Designer.cs" />
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExchange\RomerLabs.cs" />
+    <Compile Include="HelpDatabaseConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpDatabaseConnection.Designer.cs">
+      <DependentUpon>HelpDatabaseConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDF.Designer.cs">
+      <DependentUpon>PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReportGroupSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReportGroupSummary.Designer.cs">
+      <DependentUpon>AnalysisPivotReportGroupSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReportGroupSummaryNoSubTotals.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReportGroupSummaryNoSubTotals.Designer.cs">
+      <DependentUpon>AnalysisPivotReportGroupSummaryNoSubTotals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\DatasourceComparisonReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\DatasourceComparisonReport.Designer.cs">
+      <DependentUpon>DatasourceComparisonReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleActivityQualityControlReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleActivityQualityControlReport.Designer.cs">
+      <DependentUpon>SampleActivityQualityControlReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleAnalysisRequestFormAjinomoto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleAnalysisRequestFormAjinomoto.Designer.cs">
+      <DependentUpon>SampleAnalysisRequestFormAjinomoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleAnalysisRequestFormEvonik.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleAnalysisRequestFormEvonik.Designer.cs">
+      <DependentUpon>SampleAnalysisRequestFormEvonik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleAnalysisRequestFormUnitedAnimalHealth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleAnalysisRequestFormUnitedAnimalHealth.Designer.cs">
+      <DependentUpon>SampleAnalysisRequestFormUnitedAnimalHealth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleLabelReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleLabelReport.Designer.cs">
+      <DependentUpon>SampleLabelReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleResultsComparisonReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleResultsComparisonReport.Designer.cs">
+      <DependentUpon>SampleResultsComparisonReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SamplesByOwnerLocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SamplesByOwnerLocation.Designer.cs">
+      <DependentUpon>SamplesByOwnerLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleSubmittedSamples.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleSubmittedSamples.Designer.cs">
+      <DependentUpon>SampleSubmittedSamples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceLocationGuaranteesReportGrouped.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceLocationGuaranteesReportGrouped.Designer.cs">
+      <DependentUpon>SourceLocationGuaranteesReportGrouped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportComments.Designer.cs">
+      <DependentUpon>ReportComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportHelp.Designer.cs">
+      <DependentUpon>ReportHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleFurtherAnalysisView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleFurtherAnalysisView.Designer.cs">
+      <DependentUpon>SampleFurtherAnalysisView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\xSampleFurtherAnalysisPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\xSampleFurtherAnalysisPending.Designer.cs">
+      <DependentUpon>xSampleFurtherAnalysisPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleMaterialHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleMaterialHelp.Designer.cs">
+      <DependentUpon>SampleMaterialHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleType.Designer.cs">
+      <DependentUpon>SampleType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDefaultDatabase.cs" />
+    <Compile Include="Web References\AIMUtilities\Analysis\SharedFunctions.cs" />
+    <Compile Include="Web References\AIMUtilities\AnchorLabelAndText.cs" />
+    <Compile Include="Web References\AIMUtilities\CSVFileReadWriter.cs" />
+    <Compile Include="Web References\AIMUtilities\ExportFunctions\GetExportBatch.cs" />
+    <Compile Include="Web References\AIMUtilities\Functions.cs" />
+    <Compile Include="Web References\AIMUtilities\GlobalFunctions.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\ImportCSVFile.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\ImportExcelFile.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\ImportRomerCSV.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\ImportTextCSV.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\SharedFunctions.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\ImportTextFile.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\Test.cs" />
+    <Compile Include="Web References\AIMUtilities\Imports\TestApp.cs" />
+    <Compile Include="Analysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis.Designer.cs">
+      <DependentUpon>Analysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisHelpIncludeExcludeCrossRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisHelpIncludeExcludeCrossRef.Designer.cs">
+      <DependentUpon>AnalysisHelpIncludeExcludeCrossRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisHelpTarget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisHelpTarget.Designer.cs">
+      <DependentUpon>AnalysisHelpTarget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\Analysis_save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler\Analysis_save.Designer.cs">
+      <DependentUpon>Analysis_save.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\ChartsSampleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart\ChartsSampleList.Designer.cs">
+      <DependentUpon>ChartsSampleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\DataSourceCrossReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\DataSourceCrossReference.Designer.cs">
+      <DependentUpon>DataSourceCrossReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\DataSourceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\DataSourceDetail.Designer.cs">
+      <DependentUpon>DataSourceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExchange\CFCTech\CSV.cs" />
+    <Compile Include="DataExchange\CFCTech\XML.cs" />
+    <Compile Include="DataExchange\Perten\CSV.cs" />
+    <Compile Include="ExportOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportOther.Designer.cs">
+      <DependentUpon>ExportOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTypes.Designer.cs">
+      <DependentUpon>FileTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuaranteeRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuaranteeRefund.Designer.cs">
+      <DependentUpon>GuaranteeRefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpRebuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpRebuild.Designer.cs">
+      <DependentUpon>HelpRebuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpSync.Designer.cs">
+      <DependentUpon>HelpSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpSystemImports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpSystemImports.Designer.cs">
+      <DependentUpon>HelpSystemImports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportMappingHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportMappingHelp.Designer.cs">
+      <DependentUpon>ImportMappingHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportHelpType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportHelpType.Designer.cs">
+      <DependentUpon>ImportHelpType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportSqlConnections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportSqlConnections.Designer.cs">
+      <DependentUpon>ImportSqlConnections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportSqlSampleMissing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportSqlSampleMissing.Designer.cs">
+      <DependentUpon>ImportSqlSampleMissing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LanguageTest.Designer.cs">
+      <DependentUpon>LanguageTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathType.Designer.cs">
+      <DependentUpon>MathType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathTypeEquation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathTypeEquation.Designer.cs">
+      <DependentUpon>MathTypeEquation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterUserDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterUserDefault.Designer.cs">
+      <DependentUpon>PrinterUserDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisHelp.Designer.cs">
+      <DependentUpon>AnalysisHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfoUtil.cs" />
+    <Compile Include="BackupService1.cs" />
+    <Compile Include="BugReporter.cs" />
+    <Compile Include="ReportDevExpress\ExportBatchDetail_Spanish.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\ExportBatchDetail_Spanish.Designer.cs">
+      <DependentUpon>ExportBatchDetail_Spanish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleActivityReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleActivityReport.Designer.cs">
+      <DependentUpon>SampleActivityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleResultsBySupplier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleResultsBySupplier.Designer.cs">
+      <DependentUpon>SampleResultsBySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceLocationGuaranteesReportSpecificNutrients.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceLocationGuaranteesReportSpecificNutrients.Designer.cs">
+      <DependentUpon>SourceLocationGuaranteesReportSpecificNutrients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\test.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\ManufacturedProductComplianceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\ManufacturedProductComplianceReport.Designer.cs">
+      <DependentUpon>ManufacturedProductComplianceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\UpdateIngredientLogReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\UpdateIngredientLogReport.Designer.cs">
+      <DependentUpon>UpdateIngredientLogReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xReportCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\xReportCreate.Designer.cs">
+      <DependentUpon>xReportCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTemplate.Designer.cs">
+      <DependentUpon>ReportTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RebuildSampleAIMSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RebuildSampleAIMSync.Designer.cs">
+      <DependentUpon>RebuildSampleAIMSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleQualityControl\SampleQuality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleQualityControl\SampleQuality.Designer.cs">
+      <DependentUpon>SampleQuality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleQualityControl\SampleQualityControlEquation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleQualityControl\SampleQualityControlEquation.Designer.cs">
+      <DependentUpon>SampleQualityControlEquation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\Charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart\Charts.Designer.cs">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\ImportInternalCrossReferenceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\ImportInternalCrossReferenceUpdate.Designer.cs">
+      <DependentUpon>ImportInternalCrossReferenceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExchange\Import\ImportSqlDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataExchange\NutriQuest\XML.cs" />
+    <Compile Include="DataExchange\Perten\Database.cs" />
+    <Compile Include="DataExchange\x_notused_ABVista\XLSX.cs" />
+    <Compile Include="DataExchange\Adisseo\API.cs" />
+    <Compile Include="DataExchange\Adisseo\CSV.cs" />
+    <Compile Include="DataExchange\DataExchangeManager.cs" />
+    <Compile Include="DataExchange\Evonik\CSV.cs" />
+    <Compile Include="DataExchange\Evonik\XLSX.cs" />
+    <Compile Include="DataExchange\Foss\CSV.cs" />
+    <Compile Include="DataExchange\Import\ImportAPI.cs" />
+    <Compile Include="DataExchange\Import\ImportCSV.cs" />
+    <Compile Include="DataExchange\Import\ImportExcel.cs" />
+    <Compile Include="DataExchange\LabAdvantage\CSV.cs" />
+    <Compile Include="DatabaseConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnection.Designer.cs">
+      <DependentUpon>DatabaseConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulation\DataMappingWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulation\DataMappingWizard.Designer.cs">
+      <DependentUpon>DataMappingWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportMessage.Designer.cs">
+      <DependentUpon>ImportMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\AIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\AIM.Designer.cs">
+      <DependentUpon>AIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Analyzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Analyzer.Designer.cs">
+      <DependentUpon>Analyzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\AnalyzerCrossReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\AnalyzerCrossReference.Designer.cs">
+      <DependentUpon>AnalyzerCrossReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\FormulationCrossReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\FormulationCrossReference.Designer.cs">
+      <DependentUpon>FormulationCrossReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\InitialLoadAimNutrientsMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\InitialLoadAimNutrientsMaterials.Designer.cs">
+      <DependentUpon>InitialLoadAimNutrientsMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReportSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReportSummary.Designer.cs">
+      <DependentUpon>AnalysisPivotReportSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportHelpDryMatter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportHelpDryMatter.Designer.cs">
+      <DependentUpon>ReportHelpDryMatter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resizer.cs" />
+    <Compile Include="Sample\SampleExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleExport.Designer.cs">
+      <DependentUpon>SampleExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleExportMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleExportMessage.Designer.cs">
+      <DependentUpon>SampleExportMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerWizard.Designer.cs">
+      <DependentUpon>SchedulerWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettings.Designer.cs">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSourceUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSourceUser.Designer.cs">
+      <DependentUpon>DataSourceUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefaultSettings.Designer.cs">
+      <DependentUpon>DefaultSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailAddress.Designer.cs">
+      <DependentUpon>EmailAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailAddressXRefMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailAddressXRefMessage.Designer.cs">
+      <DependentUpon>EmailAddressXRefMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpAnalysisCalculations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpAnalysisCalculations.Designer.cs">
+      <DependentUpon>HelpAnalysisCalculations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportHelp.Designer.cs">
+      <DependentUpon>ImportHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportMapping.Designer.cs">
+      <DependentUpon>ImportMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportDataUserDefined.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportDataUserDefined.Designer.cs">
+      <DependentUpon>ImportDataUserDefined.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ImportTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ImportTest.Designer.cs">
+      <DependentUpon>ImportTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\MapWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\MapWizard.Designer.cs">
+      <DependentUpon>MapWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageResource.Designer.cs">
+      <DependentUpon>LanguageResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DeveloperWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeveloperWindow.Designer.cs">
+      <DependentUpon>DeveloperWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AIMGlobal.cs" />
+    <Compile Include="ExportBatchMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportBatchMaintenance.Designer.cs">
+      <DependentUpon>ExportBatchMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportBatchMaintenancePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportBatchMaintenancePopUp.Designer.cs">
+      <DependentUpon>ExportBatchMaintenancePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportBatchPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportBatchPending.Designer.cs">
+      <DependentUpon>ExportBatchPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FossSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FossSample.Designer.cs">
+      <DependentUpon>FossSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulation\DataMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulation\DataMapping.Designer.cs">
+      <DependentUpon>DataMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Instrument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Instrument.Designer.cs">
+      <DependentUpon>Instrument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MockNIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MockNIR.Designer.cs">
+      <DependentUpon>MockNIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCellMergeHelper.cs" />
+    <Compile Include="SetupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupMenu.Designer.cs">
+      <DependentUpon>SetupMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageDetail_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDetail_Test.Designer.cs">
+      <DependentUpon>MessageDetail_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageDetailOutside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDetailOutside.Designer.cs">
+      <DependentUpon>MessageDetailOutside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageDetailInside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDetailInside.Designer.cs">
+      <DependentUpon>MessageDetailInside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movie.Designer.cs">
+      <DependentUpon>Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterSetup.Designer.cs">
+      <DependentUpon>PrinterSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExchange\ImportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataExchange\ImportData.Designer.cs">
+      <DependentUpon>ImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisDetailReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisDetailReport.Designer.cs">
+      <DependentUpon>AnalysisDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleComparisonReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleComparisonReport.Designer.cs">
+      <DependentUpon>SampleComparisonReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\Trend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\Trend.Designer.cs">
+      <DependentUpon>Trend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\xAnalysisPivotReportAll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\xAnalysisPivotReportAll.Designer.cs">
+      <DependentUpon>xAnalysisPivotReportAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\CFCIngredientReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\CFCIngredientReport.Designer.cs">
+      <DependentUpon>CFCIngredientReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\ExportBatchDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\ExportBatchDetail.Designer.cs">
+      <DependentUpon>ExportBatchDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\FormulationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\FormulationReport.Designer.cs">
+      <DependentUpon>FormulationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\IngredientExportBatchReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\IngredientExportBatchReport.Designer.cs">
+      <DependentUpon>IngredientExportBatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\OrphansAimMaterialRefAnalyzerMaterial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\OrphansAimMaterialRefAnalyzerMaterial.Designer.cs">
+      <DependentUpon>OrphansAimMaterialRefAnalyzerMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\OrphansAimNutrientRefAnalyzerNutrient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\OrphansAimNutrientRefAnalyzerNutrient.Designer.cs">
+      <DependentUpon>OrphansAimNutrientRefAnalyzerNutrient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisPivotReport.Designer.cs">
+      <DependentUpon>AnalysisPivotReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleLineReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleLineReport.Designer.cs">
+      <DependentUpon>SampleLineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\TestPivot.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\TestPivot.Designer.cs">
+      <DependentUpon>TestPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\TestGraph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\TestGraph.Designer.cs">
+      <DependentUpon>TestGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\TestMark.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\TestMark.Designer.cs">
+      <DependentUpon>TestMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageResource.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LanguageResource.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportFunctions.cs" />
+    <Compile Include="Sample\SampleDetailFromAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleDetailFromAnalysis.Designer.cs">
+      <DependentUpon>SampleDetailFromAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleLog.Designer.cs">
+      <DependentUpon>SampleLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler\Event.Designer.cs">
+      <DependentUpon>Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerMain.Designer.cs">
+      <DependentUpon>SchedulerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendUsage.Designer.cs">
+      <DependentUpon>SendUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemLog.Designer.cs">
+      <DependentUpon>SystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableToEnum.cs" />
+    <Compile Include="Test\Test.cs" />
+    <Compile Include="Test\Test2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Test2.Designer.cs">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\testChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\testChart.Designer.cs">
+      <DependentUpon>testChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\test4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\test4.Designer.cs">
+      <DependentUpon>test4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestGrid.Designer.cs">
+      <DependentUpon>TestGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestIndexProb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestIndexProb.Designer.cs">
+      <DependentUpon>TestIndexProb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\ImportExternalCrossReferenceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\ImportExternalCrossReferenceUpdate.designer.cs">
+      <DependentUpon>ImportExternalCrossReferenceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReference\AnalyzerCrossReferenceMassUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReference\AnalyzerCrossReferenceMassUpdate.Designer.cs">
+      <DependentUpon>AnalyzerCrossReferenceMassUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestPivotGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestPivotGrid.Designer.cs">
+      <DependentUpon>TestPivotGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDefaults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDefaults.Designer.cs">
+      <DependentUpon>UserDefaults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersLoggedIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersLoggedIn.Designer.cs">
+      <DependentUpon>UsersLoggedIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities.Designer.cs">
+      <DependentUpon>Utilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AIMPlantReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AIMPlantReport.Designer.cs">
+      <DependentUpon>AIMPlantReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AIMOwnerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AIMOwnerReport.Designer.cs">
+      <DependentUpon>AIMOwnerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisNIRMaterialReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisNIRMaterialReport.Designer.cs">
+      <DependentUpon>AnalysisNIRMaterialReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisSummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisSummaryReport.Designer.cs">
+      <DependentUpon>AnalysisSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\CFCProductReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\CFCProductReport.Designer.cs">
+      <DependentUpon>CFCProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AIMOwnerLocationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AIMOwnerLocationReport.Designer.cs">
+      <DependentUpon>AIMOwnerLocationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisSourceComparisonReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisSourceComparisonReport.Designer.cs">
+      <DependentUpon>AnalysisSourceComparisonReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisDateComparisonReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalysisDateComparisonReport.Designer.cs">
+      <DependentUpon>AnalysisDateComparisonReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\ProductSpecificationComparisonBySampleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\ProductSpecificationComparisonBySampleReport.Designer.cs">
+      <DependentUpon>ProductSpecificationComparisonBySampleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\ProductSpecificationComparisonByMeanReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\ProductSpecificationComparisonByMeanReport.Designer.cs">
+      <DependentUpon>ProductSpecificationComparisonByMeanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\GuaranteeComparisonBySampleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\GuaranteeComparisonBySampleReport.Designer.cs">
+      <DependentUpon>GuaranteeComparisonBySampleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\GuaranteeComparisonByMeanReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\GuaranteeComparisonByMeanReport.Designer.cs">
+      <DependentUpon>GuaranteeComparisonByMeanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleLabelReportOneInch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SampleLabelReportOneInch.Designer.cs">
+      <DependentUpon>SampleLabelReportOneInch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceLocationGuaranteesReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceLocationGuaranteesReport.Designer.cs">
+      <DependentUpon>SourceLocationGuaranteesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\SourceReport.Designer.cs">
+      <DependentUpon>SourceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\NIRNutrientReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\NIRNutrientReport.Designer.cs">
+      <DependentUpon>NIRNutrientReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalyzerMaterialReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDevExpress\AnalyzerMaterialReport.Designer.cs">
+      <DependentUpon>AnalyzerMaterialReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportAdvanced.Designer.cs">
+      <DependentUpon>ReportAdvanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSimple.Designer.cs">
+      <DependentUpon>ReportSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample.Designer.cs">
+      <DependentUpon>Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleInfoForProcessResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleInfoForProcessResult.Designer.cs">
+      <DependentUpon>SampleInfoForProcessResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabOrder.Designer.cs">
+      <DependentUpon>TabOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilitiesCFCTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilitiesCFCTech.Designer.cs">
+      <DependentUpon>UtilitiesCFCTech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs" />
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UpdaterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebService.Designer.cs">
+      <DependentUpon>WebService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnalysisProductHelp.resx">
+      <DependentUpon>AnalysisProductHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisProductSampleDetail.resx">
+      <DependentUpon>AnalysisProductSampleDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisProductToleranceHelp.resx">
+      <DependentUpon>AnalysisProductToleranceHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cloud\FurtherAnalysis.resx">
+      <DependentUpon>FurtherAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cloud\PendingSample.resx">
+      <DependentUpon>PendingSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cloud\PNECredit.resx">
+      <DependentUpon>PNECredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyName.resx">
+      <DependentUpon>CompanyName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroundUnGroundCrossReference.resx">
+      <DependentUpon>GroundUnGroundCrossReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IconList.resx">
+      <DependentUpon>IconList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IconListResources.resx">
+      <DependentUpon>IconListResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\AIMSupplierLocationGroupHelp.resx">
+      <DependentUpon>AIMSupplierLocationGroupHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductTolerance.resx">
+      <DependentUpon>ProductTolerance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NutrientTolerance.resx">
+      <DependentUpon>NutrientTolerance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis.resx">
+      <DependentUpon>Analysis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisHelpIncludeExcludeCrossRef.resx">
+      <DependentUpon>AnalysisHelpIncludeExcludeCrossRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisHelpTarget.resx">
+      <DependentUpon>AnalysisHelpTarget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisProduct.resx">
+      <DependentUpon>AnalysisProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDesigner.resx" />
+    <EmbeddedResource Include="Report\ReportDesignTool.resx" />
+    <EmbeddedResource Include="Report\Report_Designer.resx">
+      <DependentUpon>Report_Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Test8.resx">
+      <DependentUpon>Test8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Test5.resx">
+      <DependentUpon>Test5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Vitapro\Forms\Export.resx">
+      <DependentUpon>Export.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Vitapro\Forms\LineMaintenance.resx">
+      <DependentUpon>LineMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Vitapro\Forms\SampleProduction.resx">
+      <DependentUpon>SampleProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Vitapro\Forms\SampleReceiving.resx">
+      <DependentUpon>SampleReceiving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Vitapro\Forms\SettingsCustom.resx">
+      <DependentUpon>SettingsCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\Vitapro\ReportDevExpress\ExportBatchDetail_Spanish.resx" />
+    <EmbeddedResource Include="DataExchange\Import\ImportSqlDatabase.resx">
+      <DependentUpon>ImportSqlDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpDatabaseConnection.resx">
+      <DependentUpon>HelpDatabaseConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF.resx">
+      <DependentUpon>PDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisPivotReportGroupSummary.resx">
+      <DependentUpon>AnalysisPivotReportGroupSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisPivotReportGroupSummaryNoSubTotals.resx">
+      <DependentUpon>AnalysisPivotReportGroupSummaryNoSubTotals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\DatasourceComparisonReport.resx">
+      <DependentUpon>DatasourceComparisonReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleActivityQualityControlReport.resx">
+      <DependentUpon>SampleActivityQualityControlReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleAnalysisRequestFormAjinomoto.resx">
+      <DependentUpon>SampleAnalysisRequestFormAjinomoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleAnalysisRequestFormEvonik.resx">
+      <DependentUpon>SampleAnalysisRequestFormEvonik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleAnalysisRequestFormUnitedAnimalHealth.resx">
+      <DependentUpon>SampleAnalysisRequestFormUnitedAnimalHealth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleLabelReport.resx">
+      <DependentUpon>SampleLabelReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleResultsComparisonReport.resx">
+      <DependentUpon>SampleResultsComparisonReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SamplesByOwnerLocation.resx">
+      <DependentUpon>SamplesByOwnerLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleSubmittedSamples.resx">
+      <DependentUpon>SampleSubmittedSamples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SourceLocationGuaranteesReportGrouped.resx">
+      <DependentUpon>SourceLocationGuaranteesReportGrouped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportComments.resx">
+      <DependentUpon>ReportComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportHelp.resx">
+      <DependentUpon>ReportHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleFurtherAnalysisView.resx">
+      <DependentUpon>SampleFurtherAnalysisView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\xSampleFurtherAnalysisPending.resx">
+      <DependentUpon>xSampleFurtherAnalysisPending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleMaterialHelp.resx">
+      <DependentUpon>SampleMaterialHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleType.resx">
+      <DependentUpon>SampleType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\Analysis_save.resx">
+      <DependentUpon>Analysis_save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart\ChartsSampleList.resx">
+      <DependentUpon>ChartsSampleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\DataSourceCrossReference.resx">
+      <DependentUpon>DataSourceCrossReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\DataSourceDetail.resx">
+      <DependentUpon>DataSourceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportOther.resx">
+      <DependentUpon>ExportOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTypes.resx">
+      <DependentUpon>FileTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuaranteeRefund.resx">
+      <DependentUpon>GuaranteeRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpRebuild.resx">
+      <DependentUpon>HelpRebuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpSync.resx">
+      <DependentUpon>HelpSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpSystemImports.resx">
+      <DependentUpon>HelpSystemImports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportMappingHelp.resx">
+      <DependentUpon>ImportMappingHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportHelpType.resx">
+      <DependentUpon>ImportHelpType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportSqlConnections.resx">
+      <DependentUpon>ImportSqlConnections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportSqlSampleMissing.resx">
+      <DependentUpon>ImportSqlSampleMissing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageTest.es-CL.resx">
+      <DependentUpon>LanguageTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageTest.resx">
+      <DependentUpon>LanguageTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathType.resx">
+      <DependentUpon>MathType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathTypeEquation.resx">
+      <DependentUpon>MathTypeEquation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterUserDefault.resx">
+      <DependentUpon>PrinterUserDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\ExportBatchDetail_Spanish.resx">
+      <DependentUpon>ExportBatchDetail_Spanish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleActivityReport.resx">
+      <DependentUpon>SampleActivityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleResultsBySupplier.resx">
+      <DependentUpon>SampleResultsBySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SourceLocationGuaranteesReportSpecificNutrients.resx">
+      <DependentUpon>SourceLocationGuaranteesReportSpecificNutrients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\ManufacturedProductComplianceReport.resx">
+      <DependentUpon>ManufacturedProductComplianceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\UpdateIngredientLogReport.resx">
+      <DependentUpon>UpdateIngredientLogReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xReportCreate.resx">
+      <DependentUpon>xReportCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTemplate.resx">
+      <DependentUpon>ReportTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RebuildSampleAIMSync.resx">
+      <DependentUpon>RebuildSampleAIMSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleQualityControl\SampleQuality.resx">
+      <DependentUpon>SampleQuality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleQualityControl\SampleQualityControlEquation.resx">
+      <DependentUpon>SampleQualityControlEquation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisHelp.resx">
+      <DependentUpon>AnalysisHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart\Charts.resx">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\ImportInternalCrossReferenceUpdate.resx">
+      <DependentUpon>ImportInternalCrossReferenceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseConnection.resx">
+      <DependentUpon>DatabaseConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulation\DataMappingWizard.resx">
+      <DependentUpon>DataMappingWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportMessage.resx">
+      <DependentUpon>ImportMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\AIM.resx">
+      <DependentUpon>AIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Analyzer.resx">
+      <DependentUpon>Analyzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\AnalyzerCrossReference.resx">
+      <DependentUpon>AnalyzerCrossReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\FormulationCrossReference.resx">
+      <DependentUpon>FormulationCrossReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\InitialLoadAimNutrientsMaterials.resx">
+      <DependentUpon>InitialLoadAimNutrientsMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisPivotReportSummary.resx">
+      <DependentUpon>AnalysisPivotReportSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportHelpDryMatter.resx">
+      <DependentUpon>ReportHelpDryMatter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleExport.resx">
+      <DependentUpon>SampleExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleExportMessage.resx">
+      <DependentUpon>SampleExportMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\SchedulerWizard.resx">
+      <DependentUpon>SchedulerWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettings.resx">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSourceUser.resx">
+      <DependentUpon>DataSourceUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultSettings.resx">
+      <DependentUpon>DefaultSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailAddress.resx">
+      <DependentUpon>EmailAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailAddressXRefMessage.resx">
+      <DependentUpon>EmailAddressXRefMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAnalysisCalculations.resx">
+      <DependentUpon>HelpAnalysisCalculations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportHelp.resx">
+      <DependentUpon>ImportHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportMapping.resx">
+      <DependentUpon>ImportMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportDataUserDefined.resx">
+      <DependentUpon>ImportDataUserDefined.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ImportTest.resx">
+      <DependentUpon>ImportTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\MapWizard.resx">
+      <DependentUpon>MapWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeveloperWindow.resx">
+      <DependentUpon>DeveloperWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportBatchMaintenance.resx">
+      <DependentUpon>ExportBatchMaintenance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportBatchMaintenancePopUp.resx">
+      <DependentUpon>ExportBatchMaintenancePopUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportBatchPending.resx">
+      <DependentUpon>ExportBatchPending.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FossSample.resx">
+      <DependentUpon>FossSample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulation\DataMapping.resx">
+      <DependentUpon>DataMapping.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Instrument.resx">
+      <DependentUpon>Instrument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MockNIR.resx">
+      <DependentUpon>MockNIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupMenu.resx">
+      <DependentUpon>SetupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageDetail_Test.resx">
+      <DependentUpon>MessageDetail_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageDetailOutside.resx">
+      <DependentUpon>MessageDetailOutside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageDetailInside.resx">
+      <DependentUpon>MessageDetailInside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movie.resx">
+      <DependentUpon>Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterSetup.resx">
+      <DependentUpon>PrinterSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataExchange\ImportData.resx">
+      <DependentUpon>ImportData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisDetailReport.resx">
+      <DependentUpon>AnalysisDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleComparisonReport.resx">
+      <DependentUpon>SampleComparisonReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\Trend.resx">
+      <DependentUpon>Trend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\xAnalysisPivotReportAll.resx">
+      <DependentUpon>xAnalysisPivotReportAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\CFCIngredientReport.resx">
+      <DependentUpon>CFCIngredientReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\ExportBatchDetail.resx">
+      <DependentUpon>ExportBatchDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\IngredientExportBatchReport.resx">
+      <DependentUpon>IngredientExportBatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\OrphansAimMaterialRefAnalyzerMaterial.resx">
+      <DependentUpon>OrphansAimMaterialRefAnalyzerMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\OrphansAimNutrientRefAnalyzerNutrient.resx">
+      <DependentUpon>OrphansAimNutrientRefAnalyzerNutrient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisPivotReport.resx">
+      <DependentUpon>AnalysisPivotReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleLineReport.resx">
+      <DependentUpon>SampleLineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\TestPivot.resx">
+      <DependentUpon>TestPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\TestGraph.resx">
+      <DependentUpon>TestGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\TestMark.resx">
+      <DependentUpon>TestMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageResource.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageResource.es.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleDetailFromAnalysis.resx">
+      <DependentUpon>SampleDetailFromAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleLog.resx">
+      <DependentUpon>SampleLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\Event.resx">
+      <DependentUpon>Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\SchedulerMain.resx">
+      <DependentUpon>SchedulerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendUsage.resx">
+      <DependentUpon>SendUsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemLog.resx">
+      <DependentUpon>SystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Test2.en-US.resx">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Test2.es-CL.resx">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Test2.resx">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\testChart.resx">
+      <DependentUpon>testChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\test4.aa.resx">
+      <DependentUpon>test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\test4.es-CL.resx">
+      <DependentUpon>test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\test4.es.resx">
+      <DependentUpon>test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\test4.resx">
+      <DependentUpon>test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestGrid.resx">
+      <DependentUpon>TestGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestIndexProb.resx">
+      <DependentUpon>TestIndexProb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\ImportExternalCrossReferenceUpdate.resx">
+      <DependentUpon>ImportExternalCrossReferenceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReference\AnalyzerCrossReferenceMassUpdate.resx">
+      <DependentUpon>AnalyzerCrossReferenceMassUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestPivotGrid.resx">
+      <DependentUpon>TestPivotGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDefaults.resx">
+      <DependentUpon>UserDefaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersLoggedIn.resx">
+      <DependentUpon>UsersLoggedIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities.resx">
+      <DependentUpon>Utilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AIMOwnerLocationReport.resx">
+      <DependentUpon>AIMOwnerLocationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AIMPlantReport.resx">
+      <DependentUpon>AIMPlantReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AIMOwnerReport.resx">
+      <DependentUpon>AIMOwnerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisNIRMaterialReport.resx">
+      <DependentUpon>AnalysisNIRMaterialReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisSummaryReport.resx">
+      <DependentUpon>AnalysisSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\CFCProductReport.resx">
+      <DependentUpon>CFCProductReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisSourceComparisonReport.resx">
+      <DependentUpon>AnalysisSourceComparisonReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalysisDateComparisonReport.resx">
+      <DependentUpon>AnalysisDateComparisonReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\ProductSpecificationComparisonBySampleReport.resx">
+      <DependentUpon>ProductSpecificationComparisonBySampleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\ProductSpecificationComparisonByMeanReport.resx">
+      <DependentUpon>ProductSpecificationComparisonByMeanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\GuaranteeComparisonBySampleReport.resx">
+      <DependentUpon>GuaranteeComparisonBySampleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\GuaranteeComparisonByMeanReport.resx">
+      <DependentUpon>GuaranteeComparisonByMeanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SampleLabelReportOneInch.resx">
+      <DependentUpon>SampleLabelReportOneInch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SourceLocationGuaranteesReport.resx">
+      <DependentUpon>SourceLocationGuaranteesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\SourceReport.resx">
+      <DependentUpon>SourceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\NIRNutrientReport.resx">
+      <DependentUpon>NIRNutrientReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDevExpress\AnalyzerMaterialReport.resx">
+      <DependentUpon>AnalyzerMaterialReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportAdvanced.resx">
+      <DependentUpon>ReportAdvanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSimple.resx">
+      <DependentUpon>ReportSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample.resx">
+      <DependentUpon>Sample.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleInfoForProcessResult.resx">
+      <DependentUpon>SampleInfoForProcessResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabOrder.resx">
+      <DependentUpon>TabOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilitiesCFCTech.resx">
+      <DependentUpon>UtilitiesCFCTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebService.resx">
+      <DependentUpon>WebService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="CFCAIM_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AimMaterialRefAnalyzerMaterialOrphanInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AimNutrientRefAnalyzerNutrientOrphanInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AIMOwnerInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AIMOwnerLocationInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AimSourceLocationGuaranteeReportInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AnalysisExportBatchMaintenanceDetail.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AnalysisInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AnalysisReportsInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AnalysisSummaryInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.CFCNutrientInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.CFCPlantInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.CFCProductInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.ExportBatchMaintenanceReportInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.GraphHeaderInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.GraphInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.NIRNutrientInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.AnalyzerMaterialInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SampleComparisonReportInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SampleForGraphTestInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SampleInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SampleLabelInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SampleResultInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SourceInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIM.Entity.SourceLocationInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIMCore.Entity.AIMMaterialInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIMCore.Entity.ChartInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIMCore.Entity.SampleCustomReportInfo.datasource" />
+    <None Include="Properties\DataSources\CFCAIMCore.Entity.SampleResultsComparisonReport.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\UpdaterService\AppUpdaterWebService.wsdl" />
+    <None Include="Web References\UpdaterService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sample\xResources\Undo-icon.png" />
+    <None Include="Sample\xResources\save.png" />
+    <None Include="Sample\xResources\refresh.png" />
+    <None Include="Sample\xResources\prtprev2.gif" />
+    <None Include="Sample\xResources\printer.png" />
+    <None Include="Sample\xResources\Print_preview.png" />
+    <None Include="Sample\xResources\exit.png" />
+    <None Include="Sample\xResources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sample\xResources\show_16x16.png" />
+    <None Include="Web References\UpdaterService\AppUpdaterWebService.disco" />
+    <None Include="Sample\xResources\show_32x32.png" />
+    <None Include="Sample\xResources\stop.png" />
+    <None Include="Sample\xResources\browse.png" />
+    <None Include="Sample\xResources\export_database_icon.jpg" />
+    <None Include="Sample\xResources\Loading2.PNG" />
+    <None Include="Resources\saveto_32x321.png" />
+    <None Include="Resources\saveas_32x32.png" />
+    <None Include="Resources\trash_recyclebin_empty_closed.png" />
+    <None Include="Resources\trash_can.png" />
+    <None Include="Resources\preview_16x16.png" />
+    <None Include="Resources\save_16x16.png" />
+    <None Include="Resources\customization_16x16.png" />
+    <None Include="Resources\1494631283_trash-o.png" />
+    <None Include="Resources\trash_can_small.png" />
+    <None Include="Resources\find_32x32.png" />
+    <None Include="Resources\status_16x16.png" />
+    <None Include="Resources\handtool_16x16.png" />
+    <None Include="Resources\preview_32x321.png" />
+    <None Include="Resources\CFCAIM.ICO" />
+    <None Include="Resources\CFCAIM.ico.bmp" />
+    <None Include="Resources\knowledgebasearticle_16x16.png" />
+    <Content Include="Imports\SQLExternalStoredProcedures.txt" />
+    <None Include="Resources\next_32x321.png" />
+    <None Include="Resources\delete_16x16.png" />
+    <None Include="Resources\save_16x161.png" />
+    <None Include="Resources\save_16x162.png" />
+    <None Include="Resources\cancel_16x165.png" />
+    <None Include="Resources\delete_16x161.png" />
+    <None Include="Resources\save_16x163.png" />
+    <None Include="Resources\delete_16x162.png" />
+    <None Include="Resources\close_16x161.png" />
+    <None Include="Resources\delete_16x163.png" />
+    <Content Include="Resources\AIM.jpg" />
+    <Content Include="Resources\AIM_icon.ico" />
+    <Content Include="Resources\AIM_icon.png" />
+    <Content Include="Resources\apply_16x16.png" />
+    <Content Include="Resources\apply_16x161.png" />
+    <Content Include="Resources\apply_16x162.png" />
+    <None Include="Resources\apply_16x163.png" />
+    <Content Include="Resources\apply_16x164.png" />
+    <Content Include="Resources\apply_32x32.png" />
+    <Content Include="Resources\apply_32x321.png" />
+    <None Include="Resources\apply_32x322.png" />
+    <Content Include="Resources\back_icon.png" />
+    <Content Include="Resources\bar_32x32.png" />
+    <Content Include="Resources\browse.png" />
+    <Content Include="Resources\cancel_16x16.png" />
+    <Content Include="Resources\cancel_16x161.png" />
+    <Content Include="Resources\cancel_16x162.png" />
+    <Content Include="Resources\cancel_16x163.png" />
+    <Content Include="Resources\cancel_16x164.png" />
+    <None Include="Resources\cancel_16x166.png" />
+    <Content Include="Resources\cancel_16x167.png" />
+    <Content Include="Resources\CFCAIMIcon.png" />
+    <Content Include="Resources\checkbox_16x16.png" />
+    <Content Include="Resources\checkbox_32x32.png" />
+    <Content Include="Resources\close_16x16.png" />
+    <Content Include="Resources\close_32x32.png" />
+    <None Include="Resources\close_32x321.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\download_16x16.png" />
+    <Content Include="Resources\download_32x32.png" />
+    <Content Include="Resources\Ellipsis.bmp" />
+    <Content Include="Resources\Ellipsis.png" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\export_32x32.png" />
+    <Content Include="Resources\export_database_icon.jpg" />
+    <Content Include="Resources\first_32x32.png" />
+    <Content Include="Resources\Flags3_2.png" />
+    <Content Include="Resources\Flags3_3.png" />
+    <Content Include="Resources\fwd_icon.png" />
+    <Content Include="Resources\gaugestylefullcircular_32x32.png" />
+    <Content Include="Resources\gaugestylethreeforthcircular_32x32.png" />
+    <Content Include="Resources\historyitem_32x32.png" />
+    <Content Include="Resources\Icon1.ico" />
+    <Content Include="Resources\index_16x16.png" />
+    <Content Include="Resources\insertcolumns_32x32.png" />
+    <Content Include="Resources\insertrows_32x32.png" />
+    <Content Include="Resources\insert_32x32.png" />
+    <Content Include="Resources\last_32x32.png" />
+    <Content Include="Resources\loading.gif" />
+    <Content Include="Resources\Loading2.PNG" />
+    <None Include="Resources\movedown_32x32.png" />
+    <None Include="Resources\moveup_32x32.png" />
+    <Content Include="Resources\next_32x32.png" />
+    <Content Include="Resources\open_16x16.png" />
+    <Content Include="Resources\pageorientationlandscape_32x32.png" />
+    <Content Include="Resources\pageorientationportrait_32x32.png" />
+    <Content Include="Resources\preview_32x32.png" />
+    <Content Include="Resources\prev_32x32.png" />
+    <Content Include="Resources\printer.png" />
+    <Content Include="Resources\print_32x32.png" />
+    <Content Include="Resources\Print_preview.png" />
+    <Content Include="Resources\properties_32x32.png" />
+    <Content Include="Resources\prtprev2.gif" />
+    <Content Include="Resources\Question.png" />
+    <Content Include="Resources\question_16x16.png" />
+    <Content Include="Resources\recurrence_32x32.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\refresh_16x16.png" />
+    <Content Include="Resources\refresh_32x32.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\saveandnew_32x32.png" />
+    <Content Include="Resources\saveto_16x16.png" />
+    <Content Include="Resources\saveto_32x32.png" />
+    <Content Include="Resources\save_32x32.png" />
+    <Content Include="Resources\setting.png" />
+    <Content Include="Resources\setting1.png" />
+    <Content Include="Resources\show_16x16.png" />
+    <Content Include="Resources\show_32x32.png" />
+    <Content Include="Resources\Start.png" />
+    <Content Include="Resources\stop.png" />
+    <Content Include="Resources\Undo-icon.png" />
+    <Content Include="Scheduler\AIM_Logo.ico" />
+    <Content Include="CFCAIM.ICO" />
+    <Content Include="Database\CFCAIMDemo.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\CFCAIMDemo_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CFCAIMDemo.mdf</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <None Include="Sample\xResources\loading.gif" />
+    <None Include="Sample\xResources\Question.png" />
+    <None Include="Sample\xResources\fwd_icon.png" />
+    <None Include="Sample\xResources\back_icon.png" />
+    <None Include="Sample\xResources\checkbox_32x32.png" />
+    <None Include="Sample\xResources\close_32x32.png" />
+    <None Include="Sample\xResources\preview_32x32.png" />
+    <None Include="Sample\xResources\print_32x32.png" />
+    <None Include="Sample\xResources\Icon1.ico" />
+    <None Include="Sample\xResources\CFCAIM.ico.bmp" />
+    <None Include="Sample\xResources\CFCAIM.ico" />
+    <None Include="Sample\xResources\AIM_icon.ico" />
+    <None Include="Sample\xResources\save_32x32.png" />
+    <None Include="Sample\xResources\recurrence_32x32.png" />
+    <None Include="Sample\xResources\properties_32x32.png" />
+    <None Include="Sample\xResources\historyitem_32x32.png" />
+    <None Include="Sample\xResources\export_32x32.png" />
+    <None Include="Sample\xResources\refresh_32x32.png" />
+    <None Include="Sample\xResources\cancel_16x16.png" />
+    <None Include="Sample\xResources\cancel_16x161.png" />
+    <None Include="Sample\xResources\cancel_16x162.png" />
+    <None Include="Sample\xResources\apply_16x16.png" />
+    <None Include="Sample\xResources\apply_16x161.png" />
+    <None Include="Sample\xResources\cancel_16x163.png" />
+    <None Include="Sample\xResources\apply_16x162.png" />
+    <None Include="Sample\xResources\cancel_16x164.png" />
+    <None Include="Sample\xResources\last_32x32.png" />
+    <None Include="Sample\xResources\first_32x32.png" />
+    <None Include="Sample\xResources\next_32x32.png" />
+    <None Include="Sample\xResources\prev_32x32.png" />
+    <None Include="Sample\xResources\insert_32x32.png" />
+    <None Include="Sample\xResources\saveto_32x32.png" />
+    <None Include="Sample\xResources\saveto_16x16.png" />
+    <None Include="Sample\xResources\saveandnew_32x32.png" />
+    <None Include="Sample\xResources\bar_32x32.png" />
+    <None Include="Sample\xResources\gaugestylethreeforthcircular_32x32.png" />
+    <None Include="Sample\xResources\gaugestylefullcircular_32x32.png" />
+    <None Include="Sample\xResources\Flags3_2.png" />
+    <None Include="Sample\xResources\Flags3_3.png" />
+    <None Include="Sample\xResources\download_32x32.png" />
+    <None Include="Sample\xResources\checkbox_16x16.png" />
+    <None Include="Sample\xResources\apply_16x163.png" />
+    <None Include="Sample\xResources\cancel_16x165.png" />
+    <None Include="Sample\xResources\close_16x16.png" />
+    <None Include="Sample\xResources\apply_16x164.png" />
+    <None Include="Sample\xResources\apply_32x32.png" />
+    <None Include="Sample\xResources\download_16x16.png" />
+    <None Include="Sample\xResources\pageorientationlandscape_32x32.png" />
+    <None Include="Sample\xResources\pageorientationportrait_32x32.png" />
+    <None Include="Sample\xResources\index_16x16.png" />
+    <None Include="Sample\xResources\question_16x16.png" />
+    <None Include="Sample\xResources\insertcolumns_32x32.png" />
+    <None Include="Sample\xResources\insertrows_32x32.png" />
+    <None Include="Sample\xResources\refresh_16x16.png" />
+    <None Include="Sample\xResources\cancel_16x166.png" />
+    <None Include="Sample\xResources\cancel_16x167.png" />
+    <None Include="Sample\xResources\open_16x16.png" />
+    <Content Include="Sample\xResources\setting.png" />
+    <None Include="Sample\xResources\setting1.png" />
+    <None Include="Sample\xResources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://webservices.cfc:8010/AppUpdaterWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UpdaterService\</RelPath>
+      <UpdateFromURL>http://webservices.cfc:8010/AppUpdaterWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CFCAIM_UpdaterService_AppUpdaterWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataExchange\Export\" />
+    <Folder Include="Web References\AIMUtilities\BackupRestore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

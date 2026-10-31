@@ -1,0 +1,46 @@
+﻿
+CREATE PROCEDURE [CFCUser].[usp_CFCUser_SEL_CFCUserID]
+	@CFCUserID		INT
+
+	--exec cfcuser.usp_CFCUser_SEL_CFCUserID 1
+
+AS
+BEGIN
+SET NOCOUNT ON;
+SELECT
+	  C.CFCUserID
+	, C.FirstName
+	, C.LastName
+	, C.IsActive
+	, A.ApplicationName	
+	, M.Password
+	, M.CreateDate
+	, M.LastLoginDate
+	, C.EmailAddress
+	, C.UserName	
+	, C.SpecificIngredientsGroupID				--10/25/22
+	, C.AIMOwnerLocationGroupID					--11/22/22
+	, C.SpecificProductsGroupID					--5/18/23
+	, C.AIMSupplierGroupID						--8/28/23
+	, C.AIMSupplierLocationGroupID				--8/28/23
+	, C.LastActiveDataMapID						--8/28/23
+	, C.SampleTestTypeGroupID					--10/4/23
+	, C.C5UserName								--10/4/23
+	
+		
+FROM
+	dbo.aspnet_Applications A
+	INNER JOIN
+		dbo.aspnet_Users U WITH(NOLOCK)
+			ON A.ApplicationId = U.ApplicationId
+	INNER JOIN
+	CFCUser.CFCUser C WITH(NOLOCK)
+		ON C.UserID = U.UserId
+	INNER JOIN
+		dbo.aspnet_Membership M WITH(NOLOCK)
+			ON U.UserId = M.UserId
+WHERE
+	CFCUserID = @CFCUserID
+END
+
+

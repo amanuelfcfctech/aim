@@ -1,0 +1,22 @@
+﻿CREATE PROCEDURE [dbo].[usp_AIMOwnerLocation_SEL_OwnerID_ALL]
+		@AIMOwnerID		INT
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SELECT
+	  OL.*
+	, U.UserName
+
+FROM 
+	dbo.AIMOwnerLocation OL WITH(NOLOCK)
+	LEFT OUTER JOIN
+		CFCUser.CFCUser U WITH(NOLOCK)
+			ON OL.CFCUserID = U.CFCUserID
+WHERE
+		OL.AIMOwnerID = @AIMOwnerID 
+
+ORDER BY
+		OL.LocationName
+	
+END

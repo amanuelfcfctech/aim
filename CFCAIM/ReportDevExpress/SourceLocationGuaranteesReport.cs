@@ -1,0 +1,166 @@
+﻿using DevExpress.XtraReports.UI;
+using System;
+
+namespace CFCAIM.ReportDevExpress
+{
+    public partial class SourceLocationGuaranteesReport : DevExpress.XtraReports.UI.XtraReport
+    {
+        public SourceLocationGuaranteesReport()
+        {
+            InitializeComponent();
+        }
+
+        private void SourceLocationGuaranteesReport_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string resultformat = string.Empty;
+
+            //4/20/21
+            if (AIMGlobal.sortNutrientsBy == "Code")
+            {
+                Detail.SortFields.Add(new GroupField("SortNutrientCode", XRColumnSortOrder.Ascending));
+            }
+            else
+            {
+                Detail.SortFields.Add(new GroupField("AimNutrientName", XRColumnSortOrder.Ascending));
+            }
+
+            //11/21/22 - set TextFormatString = system settings for number of decimals
+            if (AIMGlobal.numberOfDecimals > 0)
+            {
+                for (int i = 0; i < AIMGlobal.numberOfDecimals; i++)
+                {
+                    resultformat = resultformat + "0";
+                }
+                xrResultValue.TextFormatString = "{0:0." + resultformat + "}";                
+            }
+
+            //6/26/23
+            if (AIMGlobal.checkOutOfRange == false)
+            {
+                xrLabelAdjMoisture.Visible = false;
+            }
+        }
+
+        //1/18/23
+        private void Detail_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+            double result = 0;
+            double adjAmt = 0;
+            double min = 0;
+            double max = 0;
+            Int32 flag = 0;
+
+
+            String code = "";
+            code = Convert.ToString(GetCurrentColumnValue("SampleCode"));
+
+            result = Convert.ToDouble(GetCurrentColumnValue("ResultValue"));
+            adjAmt = Convert.ToDouble(GetCurrentColumnValue("AdjustedNutrientAmount"));
+            min = Convert.ToDouble(GetCurrentColumnValue("Min"));
+            max = Convert.ToDouble(GetCurrentColumnValue("Max"));
+            flag = Convert.ToInt32(GetCurrentColumnValue("Flag"));
+
+            
+
+            if (AIMGlobal.checkOutOfRange == true)
+            {
+               
+                if (AIMGlobal.resultOrAdjustedValue == "A")
+                {
+                    if ((adjAmt < min) || (adjAmt > max && max != 0))
+                    {
+                        xrFlagAdjusted.Visible = true;          //flag for result is set in stp; flag for adjusted is set here.
+                    }                           //print line
+                    else
+                    {
+                        e.Cancel = true;        //don't print line
+                    }
+                }
+                else
+                {
+                    if ((result < min) || (result > max && max != 0))
+                    { }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }
+
+            }
+            else
+            {
+                //6/26/23 - hide column
+                ////flag for result is set in stp; flag for adjusted is set here.
+                //if ((adjAmt < min) || (adjAmt > max && max != 0))
+                //{
+                //    xrFlagAdjusted.Visible = true;
+                //}
+                //else
+                //{
+                //    xrFlagAdjusted.Visible = false;
+                //}                
+                xrAdjustedMoisture.Visible = false;
+            }
+                       
+
+        }
+                
+        //1/18/23
+        private void groupHeaderBand4_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
+        {           
+
+            double result = 0;
+            double adjAmt = 0;
+            double min = 0;
+            double max = 0;
+
+            String code = "";
+            code = Convert.ToString(GetCurrentColumnValue("SampleCode"));
+
+            result = Convert.ToDouble(GetCurrentColumnValue("ResultValue"));
+            adjAmt = Convert.ToDouble(GetCurrentColumnValue("AdjustedNutrientAmount"));
+            min = Convert.ToDouble(GetCurrentColumnValue("Min"));
+            max = Convert.ToDouble(GetCurrentColumnValue("Max"));
+
+            if (AIMGlobal.checkOutOfRange == true)
+            {              
+
+                if (AIMGlobal.resultOrAdjustedValue == "A")
+                {
+                    if ((adjAmt < min) || (adjAmt > max && max != 0))
+                    {
+                        xrFlagAdjusted.Visible = true;      //flag for result is set in stp; flag for adjusted is set here.
+                    }
+                    else
+                    {
+                        e.Cancel = true;                
+                    }
+                }
+
+                //6/26/23 - uncommented
+                else
+                {
+                    if ((result < min) || (result > max && max != 0))
+                    { }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+            else
+            {
+                //flag for result is set in stp; flag for adjusted is set here.
+                if ((adjAmt < min) || (adjAmt > max && max != 0))
+                {
+                    xrFlagAdjusted.Visible = true;
+                }
+                else
+                {
+                    xrFlagAdjusted.Visible = false;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+﻿using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using DevExpress.XtraReports.UI;
+using CFCAIMCore.Entity;
+using CFCAIMCore.Manager;
+using System.Collections.Generic;
+
+namespace CFCAIM.ReportDevExpress
+{
+	public partial class DatasourceComparisonReport : DevExpress.XtraReports.UI.XtraReport
+	{
+		public DatasourceComparisonReport()
+		{
+			InitializeComponent();
+		}
+
+		private void DatasourceComparisonReport_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+		{
+			//check alternate-name table for name of "Expiration Date" column 
+			List<AlternateNameInfo> alternate = new List<AlternateNameInfo>();
+			alternate = AIMManager.GetAlternateName((Int32)EnumFormID.Sample, "lblExpirationDate");
+			if (alternate.Count != 0)
+			{
+				xrLabelSampleDate.Text = alternate[0].AlternateName;
+			}
+			else
+			{
+				xrLabelSampleDate.Text = "Expiration Date";
+			}
+
+			//set date field name for report heading
+			if (AIMGlobal.useResultAnalysisDate == true)
+			{
+				xrLabelHeadingDate.Text = "Analysis Date";
+			}
+			else
+			{
+				xrLabelHeadingDate.Text = "Sample Date";
+			}
+
+
+
+			txtCompany.Text = CFCAIMCore.Global.CompanyName();
+
+			//if only 2 nutrients are selected, hide third columns
+			if (AIMGlobal.resultCount == 2)
+			{
+				xrLabelHeader31.Visible = false;
+				xrLabelHeader32.Visible = false;
+				xrLabelHeader33.Visible = false;
+				xrLabelHeader34.Visible = false;
+
+				xrLabelSum31.Visible = false;
+				xrLabelSum32.Visible = false;
+				xrLabelSum33.Visible = false;
+			}
+
+			//if only 1 nutrient is selected, hide second and third columns
+			else if (AIMGlobal.resultCount == 1)
+			{
+				xrLabelHeader21.Visible = false;
+				xrLabelHeader22.Visible = false;
+				xrLabelHeader23.Visible = false;
+				xrLabelHeader24.Visible = false;
+
+				xrLabelSum21.Visible = false;
+				xrLabelSum22.Visible = false;
+				xrLabelSum23.Visible = false;
+
+				xrLabelHeader31.Visible = false;
+				xrLabelHeader32.Visible = false;
+				xrLabelHeader33.Visible = false;
+				xrLabelHeader34.Visible = false;
+
+				xrLabelSum31.Visible = false;
+				xrLabelSum32.Visible = false;
+				xrLabelSum33.Visible = false;
+
+			}
+		}
+
+		private void xrPanel1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+		{
+			//This section skips rows where each of the datasource values = 0 -- OR -- where there is no comparison between the 2 datasources (one = zero)
+			if (AIMGlobal.resultCount == 1)
+			{
+				if ((Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value1")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value1")) == 0 					
+					)
+					||
+					(Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value1")) == 0 || Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value1")) == 0)
+					)
+				{
+					e.Cancel = true;
+				}
+			}
+			else if (AIMGlobal.resultCount == 2)
+			{
+				if ((Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value1")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value1")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value2")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value2")) == 0 				
+					)
+					||
+					(Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value1")) == 0 || Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value1")) == 0)
+					&&
+					(Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value2")) == 0 || Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value2")) == 0)
+					)
+				{
+					e.Cancel = true;
+				}
+			}
+			else if (AIMGlobal.resultCount == 3)
+			{
+				if ((Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value1")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value1")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value2")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value2")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value3")) == 0 &&
+					Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value3")) == 0
+					) 
+					||
+					(Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value1")) == 0 || Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value1")) == 0)
+					&&
+					(Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value2")) == 0 || Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value2")) == 0)
+					&&
+					(Convert.ToInt32(this.GetCurrentColumnValue("Datasource1Value3")) == 0 || Convert.ToInt32(this.GetCurrentColumnValue("Datasource2Value3")) == 0)
+					)
+				{
+					e.Cancel = true;
+				}
+			}			
+		}
+	}
+}

@@ -1,0 +1,10 @@
+﻿CREATE PROCEDURE [dbo].[usp_System_SEL]
+AS
+BEGIN
+
+SET NOCOUNT ON;
+
+SELECT 
+	DATEADD(HH, -1, GETDATE()) AS SystemDate
+
+END
